@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 12:51:49 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/03/17 13:05:42 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/03/17 13:42:32 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,19 @@ int main(int ac, char **av)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
 		return (0);
 	}
-	for (int i = 1; i < ac; i++)
+	int i = 1;
+	while (i < ac)
 	{
-		for (int j = 0; av[i][j]; j++)
+		int j = 0;
+		while (av[i][j])
 		{
 			if (av[i][j] >= 'a' && av[i][j] <= 'z')
 				av[i][j] -= 32;
+			j++;
 		}
 		std::cout << av[i];
-		if (i < ac - 1)
-			std::cout << " ";
+		std::cout << " ";
+		i++;
 	}
 	std::cout << "\n";
 	return (0);
