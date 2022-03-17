@@ -1,0 +1,5 @@
+.vscode
+*.o
+megaphone
+.DS_Store
+*a.out
