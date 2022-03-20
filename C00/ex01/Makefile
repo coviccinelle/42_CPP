@@ -1,12 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
+#    Updated: 2022/03/18 18:19:10 by thi-phng         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-NAME	=	megaphone
+NAME	=	PhoneBook
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
-SRC		=	megaphone.cpp
+SRC		=	PhoneBook.Class.cpp \
+			Contact.Class.cpp \
+			main.cpp \
+
 OBJDIR	=	objs
 OBJ		=	$(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
-
 
 .SILENT:
 SHELL	:= bash
