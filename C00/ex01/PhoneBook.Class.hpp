@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:25:35 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/04/23 16:48:36 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/04/23 16:50:50 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
         
 private:
 
-       contact	contact[8];
+       Contact	contact[8];
 };
 
 # endif
