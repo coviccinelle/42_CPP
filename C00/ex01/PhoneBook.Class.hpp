@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:25:35 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/03/18 18:29:18 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/04/23 15:53:47 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ public:
         
 private:
 
-        srd::string         _first_name;
-        srd::string         _last_name;
-        srd::string         _nickname;
-        srd::string         _phone_number;
-        srd::string         _darkest_secret;
+        std::string         _first_name;
+        std::string         _last_name;
+        std::string         _nickname;
+        std::string         _phone_number;
+        std::string         _darkest_secret;
         
 };
 
