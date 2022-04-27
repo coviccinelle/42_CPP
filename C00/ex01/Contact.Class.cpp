@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:20:41 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/04/26 23:05:39 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/04/27 10:03:42 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void    Contact::display_one(void){
         std::cout << this->_first_name;
     if (this->_first_name.length() > 10)
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 9; i++)
             std::cout << this->_first_name.at(i);
         std::cout << ".";
     }
@@ -104,38 +104,47 @@ void    Contact::display_one(void){
 
         // *** LAST_NAME *** //
     if (this->_last_name.length() == 10)
-        std::cout << this->_first_name;
-    if (this->_first_name.length() > 10)
+        std::cout << this->_last_name;
+    if (this->_last_name.length() > 10)
     {
-        for (int i = 0; i < 10; i++)
-            std::cout << this->_first_name.at(i);
+        for (int i = 0; i < 9; i++)
+            std::cout << this->_last_name.at(i);
         std::cout << ".";
     }
-    else if (this->_first_name.length() < 10)
+    else if (this->_last_name.length() < 10)
     {
-        for (int i = 0; i < 10 - _first_name.length(); i++)
+        for (int i = 0; i < 10 - _last_name.length(); i++)
             std::cout << " ";
-        std::cout << this->_first_name;
+        std::cout << this->_last_name;
     }
     std::cout << "|";
 
 
         // *** NICK_NAME *** //
-    if (this->_first_name.length() == 10)
-        std::cout << this->_first_name;
-    if (this->_first_name.length() > 10)
+    if (this->_nick_name.length() == 10)
+        std::cout << this->_nick_name;
+    if (this->_nick_name.length() > 10)
     {
-        for (int i = 0; i < 10; i++)
-            std::cout << this->_first_name.at(i);
+        for (int i = 0; i < 9; i++)
+            std::cout << this->_nick_name.at(i);
         std::cout << ".";
     }
-    else if (this->_first_name.length() < 10)
+    else if (this->_last_name.length() < 10)
     {
-        for (int i = 0; i < 10 - _first_name.length(); i++)
+        for (int i = 0; i < 10 - _last_name.length(); i++)
             std::cout << " ";
-        std::cout << this->_first_name;
+        std::cout << this->_last_name;
     }
     std::cout << "|";
 
+}
+
+void    Contact::display_all(void)
+{
+    std::cout << "First name: " << _first_name << std::endl;
+    std::cout << "Last name: " << _last_name << std::endl;
+    std::cout << "Nick name: " << _nickname << std::endl;
+    std::cout << "Phone number: " << _phone_name << std::endl;
+    std::cout << "Darkest secret: " << _darkest_secret << std::endl;
 }
 
