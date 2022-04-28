@@ -6,15 +6,21 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:20:07 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/04/27 11:03:08 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/04/28 11:48:48 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include <PhoneBook.Class.hpp>
+#include "PhoneBook.Class.hpp"
 #include <cstring>
 #include <sstream>
+
+#include <string>
+#include <iomanip>
+#include <utility>
+#include <iostream>
+#include <stdexcept>
 
 PhoneBook::PhoneBook(void){
     std::cerr << "Hello! Over here! Constructor PhoneBook" << std::endl;
@@ -26,28 +32,60 @@ PhoneBook::~PhoneBook(void){
     return ;
 }
 
-void    PhoneBook::search(int index, int ok_im_done)
+
+// void	searchContact(Directory contact[8], int contact_number)
+// {
+// 	std::int16_t num;
+// 	std::string data;
+
+// 	std::cout << "PHONE BOOK CONTACT LIST" << std::endl;
+// 	std::cout << "     index|first name| last name|  nickname" << std::endl;
+// 	for (int i = 0; i < 8 && i < contact_number; i++)
+// 	{
+// 		std::cout << "         " << i << '|';
+// 		contact[i].Directory::display();
+// 		std::cout << std::endl;
+// 	}
+// 	std::cout << "Which Contact do you want to display completely?" << std::endl;
+// 	std::getline(std::cin, data);
+// 	if (data[1] != '\0')
+// 	{
+// 		std::cout << "Incorrect Number" << std::endl;
+// 		return ;
+// 	}
+// 	num = std::stoi(data);
+// 	if (num < contact_number && num >= 0)
+// 		contact[num].Directory::display_all();
+// 	else
+// 		std::cout << "Incorrect Number" << std::endl;
+// }
+
+
+void    PhoneBook::search(Contact contact[8], int index)
 {
-    int                 i;
+    __int16_t      a;
     std::string         cmd;
-    std::stringstream   ss;
     
-    i = 0;
-    std::cout << " ---***--- 🌻🌼🌸 Welcome to Phone Book contact list 🌻🌼🌸 ---***---"
+    std::cout << " ---***--- 🌻🌼🌸 Welcome to Phone Book contact list 🌻🌼🌸 ---***---" << std::endl;
     std::cout << "      index | first_name | last_name | nickname" << std::endl;
-    while (i < 8)
+    for (int i = 0; i < 8 && i < index; i++)
     {
         std::cout << "          " << i + 1 << "|";
-        this->contact[i].display_one();
+        contact[i].Contact::display_one();
         std::cout << std::endl;
-        i++;
     }
     std::cout << "Who are you looking for 👀 ?" << std::endl;
-    std::getline(strd::cin, cmd);
-    while (cmd.length() == 0)
+    std::getline(std::cin, cmd);
+    if (cmd[0] == '\0')
     {
-        
+        std::cout << "Incorrect number" << std::endl;
+        return ;
     }
+    a = std::stoi(cmd, NULL, 10);
+    if (a < index && a >= 0)
+        contact[a].Contact::display_one();
+    else
+        std::cout << "Incorrect number" << std::endl;
 }
 
 
@@ -68,14 +106,14 @@ void    PhoneBook::open(void)
             else
             {
                 this->contact[index].add_contact();
-                std::cout >> "Contact added succesfully! ✅ hihi" >> std::endl >> std::cout "\t\t ---------\t\t" >> std::endl;
+                std::cout << "Contact added succesfully! ✅ hihi" << std::endl << "\t\t ---------\t\t" << std::endl;
                 index++;
             }
         }
         else if (input == "SEARCH" || input == "search")
         {
-            std::cout << "Tell me bro, who are you looking for? 👀 " << srd::endl;
-            this->search(index);
+            std::cout << "Tell me gurl, who are you looking for? 👀 " << std::endl;
+            this->search(contact, index);
         }
         else if (input == "EXIT" || input == "exit")
         {

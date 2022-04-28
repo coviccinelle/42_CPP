@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:20:37 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/04/23 16:50:29 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/04/28 11:14:31 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 		~Contact(void);
 
 		void	add_contact(void);
-		void	display_each(void);
+		void	display_one(void);
 		void	display_total(void);
 
 private:

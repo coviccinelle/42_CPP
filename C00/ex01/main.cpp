@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:19:42 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/04/26 12:29:40 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/04/28 10:43:21 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		main(int ac, char **av)
 	{
 		std::cout << "Ok Argument but the PhoneBook is not done yet, pls come back later hihi" << std::endl;
 		//do something
-        //run.open();
+        run.open();
 		return (0);
 	}
 	std::cout << "Invalid Arguments" << std::endl;
