@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:25:35 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/04/28 11:36:44 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/04/29 11:30:17 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
         ~PhoneBook(void);
 
         void    open(void);
-        void    search(Contact contact[8], int index);
+        void    search(int index, int uki);
         
 private:
 
