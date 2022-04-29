@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:20:07 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/04/29 18:05:53 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/04/29 19:15:48 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void    PhoneBook::search(int index, int uki)
     ss << cmd;
     ss >> a;
     //a = std::stoi(cmd)
-    //std::cout << "aaaaaaa = " << a << std::endl;
     if ((a > 0 && a <= index) || uki == 1)
     {
         contact[a - 1].Contact::display_one();
@@ -63,7 +62,6 @@ void    PhoneBook::search(int index, int uki)
         std::cout << "🌼 Incorrect number" << std::endl << "\t \033[1;33m Choose [ADD], [SEARCH] or [EXIT] \033[0;214m" << std::endl;
     }
 }
-
 
 void    PhoneBook::open(void)
 {
@@ -97,7 +95,7 @@ void    PhoneBook::open(void)
         }
         else if (input == "SEARCH" || input == "search")
         {
-            std::cout << "Tell me gurl, who are you looking for? 👀 " << std::endl;
+            std::cout << "Tell me somthing gurl... who are you looking for? 👀 " << std::endl;
             this->search(index, uki);
         }
         else if (input == "EXIT" || input == "exit")

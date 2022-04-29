@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:20:41 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/04/29 18:08:32 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/04/29 19:16:03 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ void    Contact::add_contact(void){
         std::getline(std::cin, this->_darkest_secret);
     }
 }
+
 // 🌟🦋🏞🧚🏻‍♀️ 🦜🍃🕊🌤✨🌈✨🌤🕊
 void    Contact::display_one(void){
     if (this->_first_name == "")
@@ -119,7 +120,6 @@ void    Contact::display_one(void){
     }
     std::cout << " |";
 
-
         // *** NICK_NAME *** //
     if (this->_nick_name.length() == 10)
         std::cout << this->_nick_name;
@@ -135,8 +135,6 @@ void    Contact::display_one(void){
             std::cout << " ";
         std::cout << this->_nick_name;
     }
-   // std::cout << "  |";
-
 }
 
 void    Contact::display_total(void)
@@ -147,4 +145,3 @@ void    Contact::display_total(void)
     std::cout << "Phone number: " << _phone_number << std::endl;
     std::cout << "Darkest secret: " << _darkest_secret << std::endl;
 }
-
