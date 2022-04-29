@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:20:41 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/04/29 23:47:09 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/04/30 00:15:17 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Contact::Contact(void){
     this->_darkest_secret = "";
     return ;
 }
+
 
 Contact::~Contact(void){
     return ;
