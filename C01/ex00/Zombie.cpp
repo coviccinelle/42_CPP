@@ -4,13 +4,13 @@
 Zombie::Zombie(std::string Name)
 {
     this->name = Name;
-    std::cout << "We create the zombie" << std::endl;
+    std::cout << "Loading... creating a zombie" << std::endl;
     return ;
 }
 
 Zombie::~Zombie()
 {
-    std::cout << "We destroy the zombie" << std::endl;
+    std::cout << "Loading... destroying a zombie" << std::endl << std::endl;
     return ;
 }
 

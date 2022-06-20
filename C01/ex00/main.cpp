@@ -3,13 +3,13 @@
 
 int main(void)
 {
-    std::cout << "We enter in randomChump" << std::endl;
+    std::cout << "randomChump  -----> ON" << std::endl;
     randomChump("OK");
-    std::cout << "We get out of randomChump" << std::endl;
+    std::cout << "randomChump  -----> OFF" << std::endl << std::endl;
 
-    std::cout << std::endl << "We enter in newZombie" << std::endl;
+    std::cout << "newZombie  -----> ON" << std::endl;
     Zombie *main_zombie = newZombie("mini_zombie");
-    std::cout << "We get out of newZombie" << std::endl;
+    std::cout << "newZombie  -----> OFF" << std::endl;
 
 
   main_zombie->announce();
