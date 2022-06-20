@@ -6,25 +6,26 @@
 /*   By: thi-phng <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:37:19 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/20 20:07:39 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/20 20:16:52 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <iostream>
 
 Zombie::Zombie(void)
 {
-	std::cout << "Creating a zombie (constructor kind of stuff)" << std::endl;
-	return (0);
+//	std::cout << "Creating a zombie (constructor kind of stuff)" << std::endl;
+	return ;
 }
 
 Zombie::~Zombie(void)
 {
 	std::cout << "Zombie " << this->_name << " is dead" << std::endl;
-	return (0);
+	return ;
 }
 
-void	Zombie::set_name(std::string name)
+void	Zombie::naming(std::string name)
 {
 	this->_name = name;
 }

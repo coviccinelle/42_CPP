@@ -6,7 +6,7 @@
 /*   By: thi-phng <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:37:36 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/20 19:59:37 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/20 20:38:49 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 class Zombie
 {
 	public:
-		Zombie(std::string Name;
+		Zombie(std::string Name);
 		~Zombie();
-		void	announce(void);
+		void	announce(void) const;
 		void	naming(std::string name);
 
 	private:
