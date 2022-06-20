@@ -6,17 +6,16 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/06/20 14:48:25 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/06/20 18:40:38 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	BraiiiiiiinnnzzzZ
+NAME	=	Moar brainz!
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
 SRC		=	Zombie.cpp \
-			newZombie.cpp \
-			randomChump.cpp \
+			zombieHorde.cpp \
 			main.cpp \
 
 OBJDIR	=	objs
