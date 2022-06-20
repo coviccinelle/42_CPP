@@ -1,0 +1,9 @@
+#include "Zombie.hpp"
+
+//alloue sur la stack
+Zombie *newZombie(std::string name)
+{
+    Zombie *new_zombie = new Zombie(name);
+    
+    return (new_zombie);
+}
