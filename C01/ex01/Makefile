@@ -6,16 +6,17 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/04/23 15:28:10 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/06/20 14:48:25 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	PhoneBook
+NAME	=	BraiiiiiiinnnzzzZ
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
-SRC		=	PhoneBook.Class.cpp \
-			Contact.Class.cpp \
+SRC		=	Zombie.cpp \
+			newZombie.cpp \
+			randomChump.cpp \
 			main.cpp \
 
 OBJDIR	=	objs
