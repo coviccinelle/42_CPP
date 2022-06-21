@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:54:54 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/21 19:54:40 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/21 22:04:05 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,50 +23,35 @@
 
 std::string ft_replace(std::string str, std::string s1, std::string s2)
 {
+    std::string     ret;
+    unsigned int    j;
+    unsigned int    i;
+
+    j = 0;
+    i = 0;
     
+    while (i < str.length())
+    {
+        while (j < s1.length())
+        {
+            if (str[i + j] == s1[j] && j = s1.length() - 1)
+            {
+                ret += s2;
+                i += s1.length() - 1; // set i in the right place
+            }
+            else
+            {
+                ret += str[i];
+                break;
+            }
+            j++;
+        }
+        j = 0;
+        i++;
+    }
+    return (ret);
 }
 
-
-
-
-
-
-
-
-
-std::string	ft_replace(std::string content, std::string s1, std::string s2)
-{
-	std::string			ncont;
-	unsigned long int	j;
-	unsigned long int	i;
-
-	i = 0;
-	j = 0;
-	while (i < content.length())
-	{
-		while (j < s1.length())
-		{
-			if (content[i + j] == s1[j] && j == s1.length() - 1)
-			{
-				ncont += s2;			//on ajoute s2 a ncont
-				i += s1.length() - 1;	//on met le conteur au bonne indice
-			}
-			else if (content[i + j] == s1[j])
-			{
-				//on passe, on a deja copie dans le if du dessus 
-			}
-			else
-			{
-				ncont += content[i]; //on ajoute le char juste apres s1 (a la place de s1 on a mis s2 dans ncont) 
-				break;	//on ne copie plus
-			}
-			j++;
-		}
-		j = 0;
-		i++;
-	}
-	return (ncont);
-}
 
 
 int	main(int argc, char **argv)
