@@ -6,17 +6,15 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/06/20 20:54:46 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/06/21 16:07:18 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Sed is for losers
+NAME	=	Sed_is_for_losers
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
-SRC		=	PhoneBook.Class.cpp \
-			Contact.Class.cpp \
-			main.cpp \
+SRC		=	main.cpp
 
 OBJDIR	=	objs
 OBJ		=	$(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
