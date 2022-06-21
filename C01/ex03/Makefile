@@ -6,17 +6,18 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/06/20 20:50:39 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/06/21 11:44:11 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Unnecessary violence
+NAME	=	Unnecessary_violence
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
-SRC		=	PhoneBook.Class.cpp \
-			Contact.Class.cpp \
-			main.cpp \
+SRC		=	HumanA.cpp \
+			HumanB.cpp \
+			Weapon.cpp \
+			main.cpp
 
 OBJDIR	=	objs
 OBJ		=	$(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
