@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:51:23 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/21 15:42:00 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/21 15:54:25 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,10 @@ Weapon::~Weapon(void)
 
 std::string const Weapon::getType(void)
 {
-    //Weapon::_type New;
-    
-   /* std::string &typeRef = New;
-    return (New);*/
     return(_Type);
 }
 
 void Weapon::setType(std::string const New)
 {
-    //euh now what???
     _Type = New;
 }
