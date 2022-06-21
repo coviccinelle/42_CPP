@@ -6,11 +6,11 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/06/20 20:42:35 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/06/21 11:34:36 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	HI THIS IS BRAIN
+NAME	=	HI_THIS_IS_BRAIN
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
