@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thi-phng <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:37:19 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/20 20:16:52 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/21 11:05:33 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ void	Zombie::naming(std::string name)
 
 void	Zombie::announce() const
 {
-	std::cout << this->_name << "Attention! This is the announcement : " << std::endl;
+	std::cout  << " Attention! " << this->_name;
 }

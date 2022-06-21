@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thi-phng <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:37:36 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/20 20:38:49 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/21 11:00:48 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
+# ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
 # include <iostream>
@@ -18,7 +18,7 @@
 class Zombie
 {
 	public:
-		Zombie(std::string Name);
+		Zombie(void);
 		~Zombie();
 		void	announce(void) const;
 		void	naming(std::string name);
@@ -29,4 +29,4 @@ class Zombie
 
 Zombie	*zombieHorde(int N, std::string name);
 
-#endif
+# endif

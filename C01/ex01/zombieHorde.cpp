@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thi-phng <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:38:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/20 20:01:30 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/21 11:16:54 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ Zombie *zombieHorde(int N, std::string name)
 	while (i < N)
 	{
 		Horde[i].naming(name);
-		std::count << "Zombie number " << i << " ";
 		Horde[i].announce();
+		std::cout << " Zombie number " << i << " is born" << std::endl;
 		i++;
 	}
 	return (Horde);
