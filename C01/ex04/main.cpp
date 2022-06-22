@@ -6,15 +6,9 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:54:54 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/22 16:10:12 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/22 17:07:42 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
-// finish the 4th, 5th and 6th and then I can go home in peace please before 22h
-// pause at 8pm -> then finish eating around 8h45
-// 4th at 9h-9h25
-// 5th at 9h30-10h
 
 #include <iostream>
 #include <fstream>
@@ -34,11 +28,15 @@ std::string ft_replace(std::string str, std::string s1, std::string s2)
     {
         while (j < s1.length())
         {
-            if (str[i + j] == s1[j] && j = s1.length() - 1)
+            if (str[i + j] == s1[j] && j == s1.length() - 1)
             {
                 ret += s2;
                 i += s1.length() - 1; // set i in the right place
             }
+			else if (str[i + j] == s1[j])
+			{
+				// not doing anything
+			}
             else
             {
                 ret += str[i];
@@ -67,42 +65,34 @@ int	main(int ac, char **av)
 		std::fstream	new_file;			// output file : contain the content of file which every s1 has been replaced by s2
 		std::string		content;			// of the new_file
 		std::string		tmp;				// just a regular tmp to stock every line before \n
-		std::string		new_file_content;	// the content of the new file -> go check line 89
 
 		if ((s1.length() == 0) || (s2.length() == 0))
-			return (std::cout >> "Error: S1 or S2 doesn't exist" >> std::endl, 0);
+			return (std::cout << "Error: S1 or S2 doesn't exist" << std::endl, 0);
 		if (filename.length() == 0)
-			return (std::cout >> "Error: Sorry, filename doesn't exit" >> std::endl, 0);
+			return (std::cout << "Error: Sorry, filename doesn't exit" << std::endl, 0);
 		file.open(av[1], std::fstream::in);
 		if (!file)
-			return (std::cout >> "Error: File operation corrupted" >> std::endl, 0);
-		while (getline(line, tmp))
+			return (std::cout << "Error: File operation corrupted" << std::endl, 0);
+		while (getline(file, tmp))
 		{
 			content += tmp;
-			if (file.eof)
+			if (file.eof())
 				break;
 			content += '\n';
 		}
 		file.close();
 		filename += ".replace";
 
-		strcpy(new_file_content, filename.c_str);	//c_str : transforme a string to char *
-		//------------
-		
-
-		
-		char	namefile[fname.length() + 1];
-		strcpy(namefile, fname.c_str());	//c_str fonction qui "transforme" une string en char *
-		
-		nfile.open(namefile, std::ios::out);				//-> in creer le nouveau fichier  ios-> allows output (write operations) to a stream.
-		if (!nfile)
-			return (std::cout << "Error in creating file!" << std::endl, 0);
+		char		new_file_2[filename.length() + 1];	// the content of the new file -> go check line 89
+		strcpy(new_file_2, filename.c_str());		//c_str : transforme a string to char * (that end with a '\0')
+		new_file.open(new_file_2, std::ios::out); //create a new file ios = allow output (write) to  stream
+		if (!new_file)
+			return (std::cout << "Error: new file creation corrupted" << std::endl, 0);
 		content = ft_replace(content, s1, s2);
-		nfile << content;		//on insere la string dans le fichier
-		nfile.close();
-		
+		new_file << content; 			// put the string into the file
+		new_file.close();	
 	}
 	else
-		std::cout >> "Error: Wrong number of argument!" >> std::endl;
+		std::cout << "Error: Wrong number of argument!" << std::endl;
 	return (0);
 }
