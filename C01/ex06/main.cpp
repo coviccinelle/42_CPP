@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:56:14 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/22 17:53:37 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/22 18:15:48 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main (void)
 
 	std::cout << "--------" << std::endl;
 
-	miniHarl.complain("bchjdsbd");
+	miniHarl.complain("coucou how are you? My darling today?");
 	
 	std::cout << "--------" << std::endl;
 	
