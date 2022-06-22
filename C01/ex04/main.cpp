@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:54:54 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/22 15:32:20 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/22 16:10:12 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,8 @@ int	main(int ac, char **av)
 
 		strcpy(new_file_content, filename.c_str);	//c_str : transforme a string to char *
 		//------------
+		
+
 		
 		char	namefile[fname.length() + 1];
 		strcpy(namefile, fname.c_str());	//c_str fonction qui "transforme" une string en char *
