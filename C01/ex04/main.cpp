@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:54:54 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/21 22:04:05 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/22 15:32:20 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,55 +52,43 @@ std::string ft_replace(std::string str, std::string s1, std::string s2)
     return (ret);
 }
 
-
-
-int	main(int argc, char **argv)
-{	
+int	main(int ac, char **av)
+{
+	// open file (filename)
+	// check s1 and s2
+	// When str "content" exist, if S1 occure, replace it (S1) with S2
 	
-	/*
-		check s1 et s2 existe
-		declare fstream
-		open file with	.is_open
-		use getline (file, temp)
-		on met tout dans tmp et on ajoute a chaque fois dans content
-						.eof ->voir la doc cpp
-		une fois que content est rempli on cherche s1 et on remplace par s2
-		on cree et on ouvre le nouveau fichier et on le rempli
-		//	ofstream -> write on files
-		//	ifstream -> read from files
-		//	fstream -> read from files and write on files 
-	
-	*/
-
-	if (argc == 4)
+	if (ac == 4)
 	{
-		std::string		fname = argv[1];	//-> nome du fichier a ouvrir
-		std::string		s1 = argv[2];		//-> string 1
-		std::string		s2 = argv[3];		//-> string 2
-		std::ifstream	file;				//-> le fichier a lire
-		std::fstream	nfile;				//-> le nouveau fichier a creer
-		std::string		content;			//-> on va mettre tout ce qui a en dans le fichier file dans content
-		std::string		tmp;				//-> va nous servir a lire le fichier car getline s'arrete lorsqu'il 
-											// trouve '\n'
+		std::string		filename = av[1];	// name of the file we need to read
+		std::string		s1 = av[2];			// string need to be replaced
+		std::string 	s2 = av[3];			// we need to replace s1 by s2
+		std::ifstream	file;				// input file
+		std::fstream	new_file;			// output file : contain the content of file which every s1 has been replaced by s2
+		std::string		content;			// of the new_file
+		std::string		tmp;				// just a regular tmp to stock every line before \n
+		std::string		new_file_content;	// the content of the new file -> go check line 89
 
-		if (fname.length() == 0)
-			return (std::cout << "the file didn't exist!" << std::endl, 0);
-		if (s1.length() == 0)
-			return (std::cout << "string1 didn't exist!" << std::endl, 0);
-		if (s2.length() == 0)
-			return (std::cout << "string2 didn't exist!" << std::endl, 0);
-		file.open(argv[1], std::fstream::in);
+		if ((s1.length() == 0) || (s2.length() == 0))
+			return (std::cout >> "Error: S1 or S2 doesn't exist" >> std::endl, 0);
+		if (filename.length() == 0)
+			return (std::cout >> "Error: Sorry, filename doesn't exit" >> std::endl, 0);
+		file.open(av[1], std::fstream::in);
 		if (!file)
-			return (std::cout << "Fail to open the file!" << std::endl, 0);
-		while (getline(file, tmp))
+			return (std::cout >> "Error: File operation corrupted" >> std::endl, 0);
+		while (getline(line, tmp))
 		{
 			content += tmp;
-			if (file.eof())					//-> on est arriver a la fin du fichier
-				break ;
+			if (file.eof)
+				break;
 			content += '\n';
 		}
 		file.close();
-		fname += ".replace";				//-> nom du nouveau fichier
+		filename += ".replace";
+
+		strcpy(new_file_content, filename.c_str);	//c_str : transforme a string to char *
+		//------------
+		
 		char	namefile[fname.length() + 1];
 		strcpy(namefile, fname.c_str());	//c_str fonction qui "transforme" une string en char *
 		
@@ -110,8 +98,9 @@ int	main(int argc, char **argv)
 		content = ft_replace(content, s1, s2);
 		nfile << content;		//on insere la string dans le fichier
 		nfile.close();
+		
 	}
 	else
-		std::cout << "Wrong numbers of params" << std::endl;
+		std::cout >> "Error: Wrong number of argument!" >> std::endl;
 	return (0);
 }
