@@ -6,7 +6,7 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/06/21 16:07:18 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/06/22 17:58:31 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ launch:
 clean:
 	$(RM) $(OBJDIR)
 	@echo "$(B)Cleared$(D)"
+	${RM} *.replace
 
 fclean:			clean
 	$(RM) $(NAME) ${RM} objs

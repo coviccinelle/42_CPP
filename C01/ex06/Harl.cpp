@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:56:58 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/22 17:52:06 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/22 17:57:09 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,13 @@ void Harl::complain( std::string level )
     while (i < 4)
     {
         if (level == complains[i])
-            (this->*ft_type[i])();
+        {
+            while (i < 4)
+            {
+                (this->*ft_type[i])();
+                i++;
+            }
+        }
         i++;
     }
 }
