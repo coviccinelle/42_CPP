@@ -6,34 +6,20 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:56:14 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/22 18:15:48 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/23 12:45:58 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main (void)
+int main (int ac, char **av)
 {
-	Harl miniHarl;
-	miniHarl.complain("DEBUG");
-
-	std::cout << "--------" << std::endl;
-
-	miniHarl.complain("ERROR");
-
-	std::cout << "--------" << std::endl;
-
-	miniHarl.complain("coucou how are you? My darling today?");
-	
-	std::cout << "--------" << std::endl;
-	
-	miniHarl.complain("");
-
-	std::cout << "--------" << std::endl;
-	
-	miniHarl.complain("INFO");
-	
-	std::cout << "--------" << std::endl;
-	
+	if (ac == 2)
+	{
+		Harl miniHarl;
+		miniHarl.complain(av[1]);
+	}
+	else
+		std::cout << "Error: Wrong number of argument" << std::endl;
 	return (0);
 }
