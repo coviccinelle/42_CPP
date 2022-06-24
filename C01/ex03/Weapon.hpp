@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:51:11 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/23 12:42:21 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/24 16:44:53 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class   Weapon
         Weapon(void);
         Weapon(std::string type);
         ~Weapon();
-        std::string const & getType();
+        std::string const &getType();
         void setType(std::string const New);
 
     private:

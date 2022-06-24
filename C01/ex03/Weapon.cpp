@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:51:23 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/21 15:54:25 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/24 16:45:10 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Weapon::~Weapon(void)
 }
 
 
-std::string const Weapon::getType(void)
+std::string const & Weapon::getType(void)
 {
     return(_Type);
 }
