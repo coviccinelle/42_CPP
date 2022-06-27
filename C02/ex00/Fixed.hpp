@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/26 13:02:53 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/27 21:30:13 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,20 @@
 
 class Fixed
 {
-private:
-    int                 _FixedPointNumber;
-    static const int    // number of fractional bits
-    /* data */
-public:
-    Fixed(/* args */);
-    Fixed();
-    ~Fixed();
+    private:
+        int                 _FixedPointNumber;
+        static const int    _Number_bits;// number of fractional bits
+        /* data */
+        
+    public:
+        Fixed(void);                //canonical default constructeur
+        Fixed(Fixed const & fx);    //canonical copy constructor
+        ~Fixed(void);               //canonical default destructor
+
+        Fixed & operator= ( const Fixed & fx); //canonical copy assignment operator overload
+        int     getRawBits (void) const;        //return the raw value of the fixed-point value
+        void    setRwBits (int const raw);      //set the raw value of the fixed-point number
+
 };
-
-Fixed::Fixed(/* args */)
-{
-}
-
-Fixed::~Fixed()
-{
-}i
 
 #endif
