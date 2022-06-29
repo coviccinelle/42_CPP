@@ -6,11 +6,11 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/27 22:30:18 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/29 13:22:28 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.cpp"
+#include "Fixed.hpp"
 
 Fixed::Fixed(void)
 {
