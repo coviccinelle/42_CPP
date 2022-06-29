@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/29 13:23:16 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/29 13:23:48 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int Fixed::getRawBits (void) const        //return the raw value of the fixed-po
     return (this->_FixedPointNumber);
 }
 
-void    setRwBits (int const raw)   //set the raw value of the fixed-point number
+void    Fixed::setRwBits (int const raw)   //set the raw value of the fixed-point number
 {
     this->_FixedPointNumber = raw;
     return ;
