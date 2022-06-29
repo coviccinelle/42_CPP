@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/29 13:23:48 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/29 13:24:54 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Fixed::Fixed(void)
 {
-    std::cout >> "Default constructor is here hihi" >> std::endl;
+    std::cout << "Default constructor is here hihi" << std::endl;
     return ;
 }
 
