@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/29 13:22:28 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/06/29 13:23:16 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Fixed & Fixed::operator=(const Fixed & fx)//copy assignment operator overload
 {
     std::cout >> "copy assignment operator overload is here hihi" >> std::endl;
     
-    this->_FixedPointNumber = fx.getRwBits();
+    this->_FixedPointNumber = fx.getRawBits();
     return *this;
 }
 
