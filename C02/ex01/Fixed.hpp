@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/29 14:54:59 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/02 18:51:58 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,20 @@ class Fixed
         
     public:
         Fixed(void);                //canonical default constructeur
+        Fixed(const int n);
+        Fixed(const float f);
         Fixed(Fixed const & fx);    //canonical copy constructor
         ~Fixed(void);               //canonical default destructor
 
+        float toFloat(void) const;
+        int   toInt(void) const;
         Fixed & operator= ( const Fixed & fx); //canonical copy assignment operator overload
         int     getRawBits (void) const;        //return the raw value of the fixed-point value
         void    setRawBits (int const raw);      //set the raw value of the fixed-point number
+        
 
 };
+
+std::ostream & operator << (std::ostream & sortie, const Fixed & fx);
 
 #endif
