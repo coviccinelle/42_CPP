@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/29 14:55:20 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/02 18:56:55 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,18 @@ Fixed::Fixed(void)
 Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;
+    return ;
+}
+
+Fixed::Fixed(const int n)
+{
+    std::cout << "Constructor that take a const int is called" << std::endl;
+    return ;
+}
+
+Fixed::Fixed(const float f)
+{
+    std::cout << "Constructor that take a const floating-point number is called" << std::endl;
     return ;
 }
 
