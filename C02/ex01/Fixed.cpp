@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/03 22:05:52 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/03 22:10:57 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ Fixed::~Fixed()
 Fixed::Fixed(const int n)
 {
     std::cout << "Constructor that take a const INT is called" << std::endl;
-    this->_Number_bits = roundf
-    return ;
+    this->_FixedPointNumber = n << this->_Number_bits; // convert int to float
 }
 
 //https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
@@ -38,7 +37,7 @@ Fixed::Fixed(const int n)
 Fixed::Fixed(const float f)
 {
     std::cout << "Constructor that take a const floating-point number is called" << std::endl;
-    return ;
+    this->_Number_bits = roundf( f * (1 << this->_Number_bits));
 }
 // roundf returns the integral value nearest to (f * (1 << _nb_bit))
 
