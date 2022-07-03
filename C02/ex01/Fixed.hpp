@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/03 22:06:50 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/03 22:25:05 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed
 {
     private:
         int                 _FixedPointNumber;
-        static const int    _Number_bits = 8;// number of fractional bits
+        static int const    _Number_bits = 8;// number of fractional bits
         /* data */
         
     public:
