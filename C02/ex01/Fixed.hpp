@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/02 18:54:10 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/03 22:06:14 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define FIXED_HPP
 
 # include <iostream>
+
 
 class Fixed
 {
