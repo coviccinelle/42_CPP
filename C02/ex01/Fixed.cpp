@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/03 22:10:57 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/03 22:19:31 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,20 @@ void    Fixed::setRawBits (int const raw)   //set the raw value of the fixed-poi
 {
     this->_FixedPointNumber = raw;
     return ;
+}
+
+float	Fixed::toFloat(void) const
+{
+	return ((float)this->_nb_fixed / (float)(1 << this->_nb_bit));
+}
+
+int	Fixed::toInt(void) const
+{
+	return (this->_nb_fixed >> _nb_bit);	//convert float into int
+}
+
+std::ostream & operator << (std::ostream & cout, const Fixed & fx) //send to the output the objets members using << for basic types...?
+{
+	cout << fx.toFloat();
+	return (cout);
 }
