@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/04 19:46:11 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 20:02:03 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,40 +59,34 @@ Fixed & Fixed::operator=(const Fixed & fx)//copy assignment operator overload
 //***----- [ The 6 comparison operators: >, <, >=, <=, == and != ] ----***//
 bool    Fixed::operator>(const Fixed & fx) const       // this > fx
 {
-    
+    return (this->toFloat() > fx.toFloat());
 }
-
 
 
 bool    Fixed::operator<(const Fixed & fx) const       // this < fx
 {
-    
+    return (this->toFloat() > fx.toFloat());
 }
-
 
 bool    Fixed::operator>=(const Fixed & fx) const      // this >= fx
 {
-    
+    return (this->toFloat() >= fx.toFloat());
 }
-
 
 bool    Fixed::operator<=(const Fixed & fx) const      // this <= fx
 {
-    
+    return (this->toFloat() <= fx.toFloat());
 }
-
 
 bool    Fixed::operator==(const Fixed & fx) const      // this == fx
 {
-    
+    return (this->toFloat() == fx.toFloat());
 }
-
 
 bool    Fixed::operator!=( const Fixed & fx) const     // this != fx
 {
-    
+    return (this->toFloat() != fx.toFloat());
 }
-
 
 
 //***----- [ The 4 arithmetic operators: +, -, *, and / ] ----***//
@@ -100,22 +94,22 @@ bool    Fixed::operator!=( const Fixed & fx) const     // this != fx
 
 Fixed   Fixed::operator+(const Fixed &b) const    // a + b
 {
-    
+    return (this->toFloat() + b.toFloat());
 }
 
 Fixed   Fixed::operator-(const Fixed &b) const    // a - b
 {
-    
+    return (this->toFloat() - b.toFloat());
 }
 
 Fixed   Fixed::operator*(const Fixed &b) const    // a * b
 {
-    
+    return (this->toFloat() * b.toFloat());
 }
 
 Fixed   Fixed::operator/(const Fixed &b) const    // a / b
 {
-    
+    return (this->toFloat() / b.toFloat());
 }    
     
 
@@ -124,22 +118,30 @@ Fixed   Fixed::operator/(const Fixed &b) const    // a / b
 
 Fixed   & Fixed::operator++(void)             //++a;
 {
-    
+    this->_FixedPointNumber++;
+    return (*this);
 }
 
 Fixed   & Fixed::operator--(void)             //--a;
 {
-    
+    this->_FixedPointNumber--;
+    return (*this);
 }
 
 Fixed   Fixed::operator++(int)                //a++;
 {
+    Fixed   tmp = *this;
     
+    this->_FixedPointNumber++;
+    return (tmp);   
 }
 
 Fixed   Fixed::operator--(int)                //a--;
 {
-    
+    Fixed   tmp;
+
+    this->_FixedPointNumber--;
+    return (tmp);
 }
 
 //***----- [ The 4 public overloaded member functions ] ----***//
