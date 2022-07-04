@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/04 19:03:42 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 19:21:21 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define FIXED_HPP
 
 # include <iostream>
+# include <cmath>
 
 class Fixed
 {
@@ -63,10 +64,10 @@ class Fixed
 
 
         //***----- [ The 4 public overloaded member functions ] ----***//
-        static Fixed            & min(Fixed & fx1, Fixed );
-        static Fixed            & min(const );
-        static Fixed            & min(&);
-        static Fixed            & max(const )
+        static Fixed            & min(Fixed & fx1, Fixed & fx2);
+        static Fixed            & max(Fixed & fx1, Fixed & fx2);
+        static Fixed const      & min(Fixed const & fx1, Fixed const & fx2);
+        static Fixed const      & max(Fixed const & fx1, Fixed const & fx2);
         
         
         float   toFloat(void) const;
