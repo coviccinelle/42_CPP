@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/04 17:04:28 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 18:52:37 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,7 @@ class Fixed
         void    setRawBits (int const raw);      //set the raw value of the fixed-point number
 
 };
+
+std::ostream & operator << (std::ostream & sortie, const Fixed & fx);
 
 #endif
