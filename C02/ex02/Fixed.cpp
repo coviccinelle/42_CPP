@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/04 18:53:28 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 19:39:54 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,90 @@ Fixed & Fixed::operator=(const Fixed & fx)//copy assignment operator overload
     this->_FixedPointNumber = fx.getRawBits();
     return *this;
 }
+
+
+//***----- [ The 6 comparison operators: >, <, >=, <=, == and != ] ----***//
+bool    operator>(const Fixed & fx) const;       // this > fx
+
+
+
+bool    operator<(const Fixed & fx) const;       // this < fx
+
+
+bool    operator>=(const Fixed & fx) const;      // this >= fx
+
+
+bool    operator<=(const Fixed & fx) const;      // this <= fx
+
+
+bool    operator==(const Fixed & fx) const;      // this == fx
+
+
+bool    operator!=( const Fixed & fx) const;     // this != fx
+
+
+
+//***----- [ The 4 arithmetic operators: +, -, *, and / ] ----***//
+// https://en.cppreference.com/w/cpp/language/operator_arithmetic => man math operators
+
+Fixed   operator+(const Fixed &b) const    // a + b
+{
+    
+}
+
+Fixed   operator-(const Fixed &b) const    // a - b
+{
+    
+}
+
+Fixed   operator*(const Fixed &b) const    // a * b
+{
+    
+}
+
+Fixed   operator/(const Fixed &b) const    // a / b
+{
+    
+}    
+    
+
+//***----- [ The 4 increment/decrement (pre/post-increment + pre/post-decrement) operators ] ----***//
+// https://en.cppreference.com/w/cpp/language/operator_incdec => man operator (in/de)crementation
+
+Fixed   & operator++(void)             //++a;
+{
+    
+}
+
+Fixed   & operator--(void)             //--a;
+{
+    
+}
+
+Fixed   operator++(int)                //a++;
+{
+    
+}
+
+Fixed   operator--(int)                //a--;
+{
+    
+}
+
+//***----- [ The 4 public overloaded member functions ] ----***//
+static Fixed            & min(Fixed & fx1, Fixed & fx2);
+
+
+static Fixed            & max(Fixed & fx1, Fixed & fx2);
+
+
+static Fixed const      & min(Fixed const & fx1, Fixed const & fx2);
+
+
+static Fixed const      & max(Fixed const & fx1, Fixed const & fx2);
+
+
+
 
 int Fixed::getRawBits (void) const        //return the raw value of the fixed-point value
 {
