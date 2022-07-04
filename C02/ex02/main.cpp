@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/04 20:43:30 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 21:03:45 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,57 @@ std::cout << b << std::endl;
 
 std::cout << Fixed::max( a, b ) << std::endl;
 
-//***----- Main extra to test more functions in the Fixed cpp file ----***//
 
-// Fixed       A = 25;
-// Fixed       B = 35;
-// Fixed const C = 45;
-// Fixed const D = 55;
+	// Fixed a;
+	// Fixed const b(1.1111f);
+	// Fixed const c(2.2222f);
+	// Fixed const d(3);
+
+	// a = b;
+
+	// std::cout << "a is " << a << std::endl;
+	// std::cout << "b is " << b << std::endl;
+	// std::cout << "c is " << c << std::endl;
+	// std::cout << "d is " << d << std::endl;
+
+	// std::cout << "---------------------------------------------" << std::endl;
+	// std::cout << "----------------BIG TEST MAIN----------------" << std::endl;
+	// std::cout << "---------------------------------------------" << std::endl;
+	
+	// std::cout << "b + b + c = " << b + b + c << "    (expecting: 4.44)" << std::endl;
+	// std::cout << "b - c = " << b - c << "    (expecting: -1.11)" << std::endl;
+	// std::cout << "c * d = " << c * d << "    (expecting: 6.66)" << std::endl;
+	// std::cout << "d / c = " << d / c << "    (expecting: 1.35)" << std::endl;
+	// std::cout << std::endl;
+
+	// std::cout << "b > c : " << (int)(b > c) << "    (expecting: 0)" << std::endl;
+	// std::cout << "b < c : " << (int)(b < c) << "    (expecting: 1)" << std::endl;
+	// std::cout << "b <= c : " << (int)(b <= c) << "    (expecting: 1)" << std::endl;
+	// std::cout << "b >= c : " << (int)(b >= c) << "    (expecting: 0)" << std::endl;
+	// std::cout << "a == b : " << (int)(a == b) << "    (expecting: 1)" << std::endl;
+	// std::cout << "a == c : " << (int)(a == c) << "    (expecting: 0)" << std::endl;
+	// std::cout << "a != b : " << (int)(a != b) << "    (expecting: 0)" << std::endl;
+	// std::cout << "a != c : " << (int)(a != c) << "    (expecting: 1)" << std::endl;
+	// std::cout << std::endl;
+
+	// std::cout << "a = " << a << "    (expecting: 1.109)" << std::endl;
+	// std::cout << "a++ = " << a++ << "    (expecting: 1.109)" << std::endl;
+	// std::cout << "a = " << a << "    (expecting: 1.113)" << std::endl;
+	// std::cout << "++a = " << ++a << "    (expecting: 1.117)" << std::endl;
+	// std::cout << "a = " << a << "    (expecting: 1.117)" << std::endl;
+	// std::cout << std::endl;
+	
+	// std::cout << "a = " << a << "    (expecting: 1.117)" << std::endl;
+	// std::cout << "a-- = " << a-- << "    (expecting: 1.117)" << std::endl;
+	// std::cout << "a = " << a << "    (expecting: 1.113)" << std::endl;
+	// std::cout << "--a = " << --a << "    (expecting: 1.109)" << std::endl;
+	// std::cout << "a = " << a << "    (expecting: 1.109)" << std::endl;
+	// std::cout << std::endl;
+
+	// std::cout << "a = " << a << std::endl;
+	// std::cout << "d = " << d << std::endl;
+	// std::cout << "member   min(a, d) = " << Fixed::min(a, d) << "  (expecting: 1.109)" << std::endl;
+	// std::cout << "member   max(a, d) = " << Fixed::max(a, d) << "        (expecting: 3)" << std::endl;
 
 
 

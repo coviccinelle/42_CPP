@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/04 20:48:59 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 21:02:46 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 Fixed::Fixed(void)
 {
-    std::cout << "Default constructor called hihi" << std::endl;
+    //std::cout << "Default constructor called hihi" << std::endl;
     return ;
 }
 
 Fixed::~Fixed()
 {
-    std::cout << "Destructor called" << std::endl;
+    //std::cout << "Destructor called" << std::endl;
     return ;
 }
 
 Fixed::Fixed(const int n)
 {
-    std::cout << "Int constructor called" << std::endl;
+    //std::cout << "Int constructor called" << std::endl;
     this->_FixedPointNumber = n << this->_Number_bits; // convert int to float
 }
 //https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
@@ -34,7 +34,7 @@ Fixed::Fixed(const int n)
 
 Fixed::Fixed(const float f)
 {
-    std::cout << "Float constructor called" << std::endl;
+    //std::cout << "Float constructor called" << std::endl;
     this->_FixedPointNumber = roundf( f * (1 << this->_Number_bits));
 }
 // roundf returns the integral value nearest to (f * (1 << _nb_bit))
@@ -42,14 +42,14 @@ Fixed::Fixed(const float f)
 
 Fixed::Fixed(Fixed const & fx)    //canonical copy constructor
 {
-    std::cout << "Copy constructor called" << std::endl;
+    //std::cout << "Copy constructor called" << std::endl;
     *this = fx;
     return ;
 }
 
 Fixed & Fixed::operator=(const Fixed & fx)//copy assignment operator overload
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    //std::cout << "Copy assignment operator called" << std::endl;
     
     this->_FixedPointNumber = fx.getRawBits();
     return *this;
@@ -65,7 +65,7 @@ bool    Fixed::operator>(const Fixed & fx) const       // this > fx
 
 bool    Fixed::operator<(const Fixed & fx) const       // this < fx
 {
-    return (this->toFloat() > fx.toFloat());
+    return (this->toFloat() < fx.toFloat());
 }
 
 bool    Fixed::operator>=(const Fixed & fx) const      // this >= fx
@@ -138,7 +138,7 @@ Fixed   Fixed::operator++(int)                //a++;
 
 Fixed   Fixed::operator--(int)                //a--;
 {
-    Fixed   tmp;
+    Fixed   tmp = *this;
 
     this->_FixedPointNumber--;
     return (tmp);
