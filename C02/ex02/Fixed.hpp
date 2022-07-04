@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/06/29 14:54:21 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 17:04:28 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,53 @@ class Fixed
         
     public:
         Fixed(void);                //canonical default constructeur
+        Fixed(const int n);
+        Fixed(const float f);
         Fixed(Fixed const & fx);    //canonical copy constructor
         ~Fixed(void);               //canonical default destructor
 
         Fixed & operator= ( const Fixed & fx); //canonical copy assignment operator overload
+    
+    
+        //***----- [ The 6 comparison operators: >, <, >=, <=, == and != ] ----***//
+        bool    operator>(const Fixed & fx) const;       // this > fx
+        bool    operator<(const Fixed & fx) const;       // this < fx
+        bool    operator>=(const Fixed & fx) const;      // this >= fx
+        bool    operator<=(const Fixed & fx) const;      // this <= fx
+        bool    operator==(const Fixed & fx) const;      // this == fx
+        bool    operator!=( const Fixed & fx) const;     // this != fx
+        
+        
+        
+        //***----- [ The 4 arithmetic operators: +, -, *, and / ] ----***//
+        // https://en.cppreference.com/w/cpp/language/operator_arithmetic => man math operators
+        
+        Fixed   operator+(const Fixed &b) const;    // a + b
+        Fixed   operator-(const Fixed &b) const;    // a - b
+        Fixed   operator*(const Fixed &b) const;    // a * b
+        Fixed   operator/(const Fixed &b) const;    // a / b
+         
+         
+
+        //***----- [ The 4 increment/decrement (pre/post-increment + pre/post-decrement) operators ] ----***//
+        // https://en.cppreference.com/w/cpp/language/operator_incdec => man operator (in/de)crementation
+
+        Fixed   & operator++(void);             //++a;
+        Fixed   & operator--(void);             //--a;
+        Fixed   operator++(void);               //a++;
+        Fixed   operator--(void);               //a--;
+        
+
+
+        //***----- [ The 4 public overloaded member functions ] ----***//
+        static Fixed            & min(&);
+        static Fixed            & min(const );
+        static Fixed            max(&);
+        static max(const )
+        
+        
+        float   toFloat(void) const;
+        int     toInt(void) const;
         int     getRawBits (void) const;        //return the raw value of the fixed-point value
         void    setRawBits (int const raw);      //set the raw value of the fixed-point number
 
