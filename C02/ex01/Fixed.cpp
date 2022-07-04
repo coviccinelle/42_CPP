@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/04 15:49:40 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 15:51:10 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ Fixed & Fixed::operator=(const Fixed & fx)//copy assignment operator overload
 
 int Fixed::getRawBits (void) const        //return the raw value of the fixed-point value
 {
-    std::cout << "getRawBits member funtion called" << std::endl;
+    //std::cout << "getRawBits member funtion called" << std::endl;
     return (this->_FixedPointNumber);
 }
 
