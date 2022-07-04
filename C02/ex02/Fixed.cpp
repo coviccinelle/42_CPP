@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/04 19:39:54 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 19:46:11 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,45 +57,63 @@ Fixed & Fixed::operator=(const Fixed & fx)//copy assignment operator overload
 
 
 //***----- [ The 6 comparison operators: >, <, >=, <=, == and != ] ----***//
-bool    operator>(const Fixed & fx) const;       // this > fx
+bool    Fixed::operator>(const Fixed & fx) const       // this > fx
+{
+    
+}
 
 
 
-bool    operator<(const Fixed & fx) const;       // this < fx
+bool    Fixed::operator<(const Fixed & fx) const       // this < fx
+{
+    
+}
 
 
-bool    operator>=(const Fixed & fx) const;      // this >= fx
+bool    Fixed::operator>=(const Fixed & fx) const      // this >= fx
+{
+    
+}
 
 
-bool    operator<=(const Fixed & fx) const;      // this <= fx
+bool    Fixed::operator<=(const Fixed & fx) const      // this <= fx
+{
+    
+}
 
 
-bool    operator==(const Fixed & fx) const;      // this == fx
+bool    Fixed::operator==(const Fixed & fx) const      // this == fx
+{
+    
+}
 
 
-bool    operator!=( const Fixed & fx) const;     // this != fx
+bool    Fixed::operator!=( const Fixed & fx) const     // this != fx
+{
+    
+}
 
 
 
 //***----- [ The 4 arithmetic operators: +, -, *, and / ] ----***//
 // https://en.cppreference.com/w/cpp/language/operator_arithmetic => man math operators
 
-Fixed   operator+(const Fixed &b) const    // a + b
+Fixed   Fixed::operator+(const Fixed &b) const    // a + b
 {
     
 }
 
-Fixed   operator-(const Fixed &b) const    // a - b
+Fixed   Fixed::operator-(const Fixed &b) const    // a - b
 {
     
 }
 
-Fixed   operator*(const Fixed &b) const    // a * b
+Fixed   Fixed::operator*(const Fixed &b) const    // a * b
 {
     
 }
 
-Fixed   operator/(const Fixed &b) const    // a / b
+Fixed   Fixed::operator/(const Fixed &b) const    // a / b
 {
     
 }    
@@ -104,37 +122,49 @@ Fixed   operator/(const Fixed &b) const    // a / b
 //***----- [ The 4 increment/decrement (pre/post-increment + pre/post-decrement) operators ] ----***//
 // https://en.cppreference.com/w/cpp/language/operator_incdec => man operator (in/de)crementation
 
-Fixed   & operator++(void)             //++a;
+Fixed   & Fixed::operator++(void)             //++a;
 {
     
 }
 
-Fixed   & operator--(void)             //--a;
+Fixed   & Fixed::operator--(void)             //--a;
 {
     
 }
 
-Fixed   operator++(int)                //a++;
+Fixed   Fixed::operator++(int)                //a++;
 {
     
 }
 
-Fixed   operator--(int)                //a--;
+Fixed   Fixed::operator--(int)                //a--;
 {
     
 }
 
 //***----- [ The 4 public overloaded member functions ] ----***//
-static Fixed            & min(Fixed & fx1, Fixed & fx2);
+static Fixed            & min(Fixed & fx1, Fixed & fx2)
+{
+    
+}
 
 
-static Fixed            & max(Fixed & fx1, Fixed & fx2);
+static Fixed            & max(Fixed & fx1, Fixed & fx2)
+{
+    
+}
 
 
-static Fixed const      & min(Fixed const & fx1, Fixed const & fx2);
+static Fixed const      & min(Fixed const & fx1, Fixed const & fx2)
+{
+    
+}
 
 
-static Fixed const      & max(Fixed const & fx1, Fixed const & fx2);
+static Fixed const      & max(Fixed const & fx1, Fixed const & fx2)
+{
+    
+}
 
 
 
@@ -163,7 +193,7 @@ int	Fixed::toInt(void) const
 
 // An overload of the insertion («) operator that inserts a floating-point representation
 // of the fixed-point number into the output stream object passed as parameter.
-std::ostream & operator << (std::ostream & cout, const Fixed & fx)
+std::ostream & Fixed::operator << (std::ostream & cout, const Fixed & fx)
 {
 	cout << fx.toFloat();
 	return (cout);
