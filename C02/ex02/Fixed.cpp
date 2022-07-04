@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/04 20:05:42 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 20:13:28 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,38 +145,39 @@ Fixed   Fixed::operator--(int)                //a--;
 }
 
 //***----- [ The 4 public overloaded member functions ] ----***//
-static Fixed    & min(Fixed & fx1, Fixed & fx2)
-{
-    if (fx1 < fx2)
-		return (fx1);
-	else
-		return (fx2);
-}
+// static Fixed    & min(Fixed & fx1, Fixed & fx2)
+// {
+//     if (fx1 < fx2)
+// 		return (fx1);
+// 	else
+// 		return (fx2);
+// }
 
-static Fixed    & max(Fixed & fx1, Fixed & fx2)
-{
-    if (fx1 > fx2)
-		return (fx1);
-	else
-		return (fx2);
-}
+// static Fixed    & max(Fixed & fx1, Fixed & fx2)
+// {
+//     if (fx1 > fx2)
+// 		return (fx1);
+// 	else
+// 		return (fx2);
+// }
 
-static Fixed const  & min(Fixed const & fx1, Fixed const & fx2)
-{
-    if (fx1 < fx2)
-		return (fx1);
-	else
-		return (fx2);
-}
+// static Fixed const  & min(Fixed const & fx1, Fixed const & fx2)
+// {
+//     if (fx1 < fx2)
+// 		return (fx1);
+// 	else
+// 		return (fx2);
+// }
 
-static Fixed const  & max(Fixed const & fx1, Fixed const & fx2)
-{
-	if (fx1 > fx2)
-		return (fx1);
-	else
-		return (fx2);
-}
+// static Fixed const  & max(Fixed const & fx1, Fixed const & fx2)
+// {
+// 	if (fx1 > fx2)
+// 		return (fx1);
+// 	else
+// 		return (fx2);
+// }
 
+//***------ Get + Set and float/int -------***//
 int Fixed::getRawBits (void) const        //return the raw value of the fixed-point value
 {
     //std::cout << "getRawBits member funtion called" << std::endl;
@@ -201,7 +202,7 @@ int	Fixed::toInt(void) const
 
 // An overload of the insertion («) operator that inserts a floating-point representation
 // of the fixed-point number into the output stream object passed as parameter.
-std::ostream & Fixed::operator << (std::ostream & cout, const Fixed & fx)
+std::ostream & operator << (std::ostream & cout, const Fixed & fx)
 {
 	cout << fx.toFloat();
 	return (cout);

@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/04 19:35:55 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/04 20:13:35 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ class Fixed
         
 
         //***----- [ The 4 public overloaded member functions ] ----***//
-        static Fixed            & min(Fixed & fx1, Fixed & fx2);
-        static Fixed            & max(Fixed & fx1, Fixed & fx2);
-        static Fixed const      & min(Fixed const & fx1, Fixed const & fx2);
-        static Fixed const      & max(Fixed const & fx1, Fixed const & fx2);
+         static Fixed            & min(Fixed & fx1, Fixed & fx2);
+         static Fixed            & max(Fixed & fx1, Fixed & fx2);
+         static Fixed const      & min(Fixed const & fx1, Fixed const & fx2);
+         static Fixed const      & max(Fixed const & fx1, Fixed const & fx2);
         
         
         float   toFloat(void) const;
