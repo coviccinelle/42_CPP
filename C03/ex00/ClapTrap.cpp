@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 11:17:44 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 11:55:29 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,6 @@ ClapTrap::~ClapTrap()
     return ;
 }
 
-ClapTrap::ClapTrap(const int n)
-{
-    std::cout << "Int constructor called" << std::endl;
-    this->_FixedPointNumber = n << this->_Number_bits; // convert int to float
-}
-//https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/
-// formules to convert double -> float
-
-
-ClapTrap::ClapTrap(const float f)
-{
-    std::cout << "Float constructor called" << std::endl;
-    this->_FixedPointNumber = roundf( f * (1 << this->_Number_bits));
-}
-// roundf returns the integral value nearest to (f * (1 << _nb_bit))
-
-
 
 ClapTrap::ClapTrap(ClapTrap const & fx)    //canonical copy constructor
 {
@@ -57,32 +40,26 @@ ClapTrap & ClapTrap::operator=(const ClapTrap & fx)//copy assignment operator ov
     return *this;
 }
 
-int ClapTrap::getRawBits (void) const        //return the raw value of the fixed-point value
-{
-    //std::cout << "getRawBits member funtion called" << std::endl;
-    return (this->_FixedPointNumber);
-}
 
-void    ClapTrap::setRawBits (int const raw)   //set the raw value of the fixed-point number
+void    ClapTrap::attack(const std::strng & target)
 {
-    this->_FixedPointNumber = raw;
+    std::cout << " attacks " << & target << ", causing " << "DAMAGE points of damage" << endl;
     return ;
 }
 
-float	ClapTrap::toFloat(void) const
+
+void    ClapTrap::takeDamage(unsigned int amount)
 {
-	return ((float)this->_FixedPointNumber / (float)(1 << this->_Number_bits));
+    
 }
 
-int	ClapTrap::toInt(void) const
-{
-	return (this->_FixedPointNumber >> _Number_bits);	//convert float into int
-}
+void    ClapTrap::beRepaired(unsigned int amount);
 
-// An overload of the insertion («) operator that inserts a floating-point representation
-// of the fixed-point number into the output stream object passed as parameter.
-std::ostream & operator << (std::ostream & cout, const ClapTrap & fx)
-{
-	cout << fx.toFloat();
-	return (cout);
-}
+
+// // An overload of the insertion («) operator that inserts a floating-point representation
+// // of the fixed-point number into the output stream object passed as parameter.
+// std::ostream & operator << (std::ostream & cout, const ClapTrap & fx)
+// {
+// 	cout << fx.toFloat();
+// 	return (cout);
+// }
