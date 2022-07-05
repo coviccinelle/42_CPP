@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 16:14:07 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 20:41:32 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,14 @@ ClapTrap & ClapTrap::operator=(const ClapTrap & fx)//copy assignment operator ov
 
 void    ClapTrap::attack(const std::string & target)
 {
-    if (this->_HitPoints > 0 && this->_EnergyPoints > 0)
+    if (/*this->_HitPoints > 0 && */this->_EnergyPoints > 0)
     {
         this->_EnergyPoints -= 1;
         std::cout << "[ClapTrap]: " << this->_Name << " attacks " << target << ", causing ";
         std::cout << _AttackDamage << " points of damage!" << std::endl;
     }
     else
-        std::cout << "Error: Not enough [Hit Points] or [Energy Points]" << std::endl;
+        std::cout << "Error: Can't attack: Not enough [Energy points]!" << std::endl;
     return ;
 }
 
@@ -79,13 +79,28 @@ void    ClapTrap::takeDamage(unsigned int amount)
     
     if (this->_HitPoints >= 1)
     {
-        this->_HitPoints -= amount;
+        if (amount > this->_HitPoints)
+            this->_HitPoints = 0;
+        else
+            this->_HitPoints -= amount;
         this->_EnergyPoints -= 1;
         std::cout << "Take damage function called" << std::endl;
     }
     else
         std::cout << "Error: Can't take damage. Not enough [Hit points] or [Energy points]!" << std::endl;
     return ;
+
+    // if (this->_HitPoints < 1)
+    // {
+    //     std::cout << "Error: Can't take damage. Not enough [Hit points] or [Energy points]!" << std::endl;
+    // }
+    // else{
+    //     this->_HitPoints -= amount;
+    //     this->_EnergyPoints -= 1;
+    //     std::cout << "[Take damage] : function called" << std::endl;
+    // }
+    return ;
+    
 }
 
 void    ClapTrap::beRepaired(unsigned int amount)
@@ -93,7 +108,7 @@ void    ClapTrap::beRepaired(unsigned int amount)
     // unsigned int     a;
     // a = this->_HitPoints;
     //if (a <= (10 - amount) && this->_EnergyPoints >= 1)
-    if (this->_HitPoints <= (10 - amount) && this->_EnergyPoints >= 1)
+    if (/*this->_HitPoints <= (10 - amount) && */this->_EnergyPoints >= 1)
     {
         this->_HitPoints += amount;
         this->_EnergyPoints -= 1;

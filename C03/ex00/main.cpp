@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 16:03:32 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 20:35:56 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ int main( void ) {
 	Fighter.beRepaired(2);
 	Fighter.annonce();
 
+
+	std::cout << std::endl;
+	Fighter.annonce();
     std::cout  <<  std::endl;
 	Fighter.takeDamage(15);
 	Fighter.annonce();
