@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 12:37:56 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:21:54 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ ClapTrap & ClapTrap::operator=(const ClapTrap & fx)//copy assignment operator ov
 }
 
 
-void    ClapTrap::attack(const std::strng & target)
+void    ClapTrap::attack(const std::string & target)
 {
     if (this->_HitPoints > 0 && this->_EnergyPoints > 0)
-        std::cout << " attacks " << & target << ", causing " << this->takeDamage(3) << endl;
+        std::cout << " attacks " << & target << ", causing " << this->takeDamage(3) << std::endl;
     else
         std::cout << "Error: Not enough [Hit Points] or [Energy Points]" << std::endl;
     return ;
