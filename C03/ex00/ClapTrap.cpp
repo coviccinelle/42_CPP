@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 20:41:32 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 20:46:37 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,6 @@ void    ClapTrap::attack(const std::string & target)
 
 void    ClapTrap::takeDamage(unsigned int amount)
 {
-  //  unsigned int     a;
-   // a = this->_HitPoints;
-    
     if (this->_HitPoints >= 1)
     {
         if (amount > this->_HitPoints)
@@ -87,20 +84,8 @@ void    ClapTrap::takeDamage(unsigned int amount)
         std::cout << "Take damage function called" << std::endl;
     }
     else
-        std::cout << "Error: Can't take damage. Not enough [Hit points] or [Energy points]!" << std::endl;
+        std::cout << "Error: Can't take damage. Not enough [Energy points]!" << std::endl;
     return ;
-
-    // if (this->_HitPoints < 1)
-    // {
-    //     std::cout << "Error: Can't take damage. Not enough [Hit points] or [Energy points]!" << std::endl;
-    // }
-    // else{
-    //     this->_HitPoints -= amount;
-    //     this->_EnergyPoints -= 1;
-    //     std::cout << "[Take damage] : function called" << std::endl;
-    // }
-    return ;
-    
 }
 
 void    ClapTrap::beRepaired(unsigned int amount)
