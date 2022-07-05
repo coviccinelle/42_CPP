@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 14:05:08 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 14:07:13 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,6 @@ class ClapTrap
         void    attack(const std::string & target);
         void    takeDamage(unsigned int amount);
         void    beRepaired(unsigned int amount);
-
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-		void	attack(const std::string &target);
 		void	annonce(void)const;
 
 		std::string	getName(void)const;
@@ -48,7 +44,7 @@ class ClapTrap
         std::string     _Name;
         unsigned int    _HitPoints = 10;
         unsigned int    _EnergyPoints = 10;
-        unisgned int    _AttackDamage = 0;
+        unsigned int    _AttackDamage = 0;
 };
 
 //std::ostream & operator << (std::ostream & sortie, const ClapTrap & fx);
