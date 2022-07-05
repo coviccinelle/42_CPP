@@ -6,13 +6,13 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 15:07:48 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 15:12:35 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void) : _Name("Default")
+ClapTrap::ClapTrap(void) : _Name("Default"), _HitPoints(10), _EnergyPou
 {
     std::cout << "Default constructor called hihi" << std::endl;
     return ;
