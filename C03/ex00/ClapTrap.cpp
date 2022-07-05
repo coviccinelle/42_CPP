@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 11:55:29 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 12:37:56 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,24 +36,48 @@ ClapTrap & ClapTrap::operator=(const ClapTrap & fx)//copy assignment operator ov
 {
     std::cout << "Copy assignment operator called" << std::endl;
     
-    this->_FixedPointNumber = fx.getRawBits();
+    this->_HitPoints = takeDamage(3);
     return *this;
 }
 
 
 void    ClapTrap::attack(const std::strng & target)
 {
-    std::cout << " attacks " << & target << ", causing " << "DAMAGE points of damage" << endl;
+    if (this->_HitPoints > 0 && this->_EnergyPoints > 0)
+        std::cout << " attacks " << & target << ", causing " << this->takeDamage(3) << endl;
+    else
+        std::cout << "Error: Not enough [Hit Points] or [Energy Points]" << std::endl;
     return ;
 }
 
 
 void    ClapTrap::takeDamage(unsigned int amount)
 {
-    
+    if (this->_HitPoints >= amount && this->_EnergyPoints >= 1)
+    {
+        this->_HitPoints -= amount;
+        this->_EnergyPoints -= 1;
+        std::cout << "Take damage function called, current Hit Points is " << this->_HitPoints << std::endl;
+        std::cout << "Current Energy Points is " << this->_EnergyPoints << std::endl;
+    }
+    else
+        std::cout << "Error: Can't take damage. Not enough [Hit points] or [Energy points]!" << std::endl;
+    return ;
 }
 
-void    ClapTrap::beRepaired(unsigned int amount);
+void    ClapTrap::beRepaired(unsigned int amount)
+{
+    if (this->_HitPoints <= (10 - amount) && this->_EnergyPoints >= 1)
+    {
+        this->_HitPoints += amount;
+        this->_EnergyPoints -= 1;
+        std::cout << "[beRepaired] function called, current Hit Points is " << this->_HitPoints << std::endl;
+        std::cout << "Current Energy Points is " << this->_EnergyPoints << std::endl;
+    }
+    else
+        std::cout << "Error: Can't repaire. Not enough [Energy points] or [Hit Points] is full !" << std::endl;
+    return ;
+}
 
 
 // // An overload of the insertion («) operator that inserts a floating-point representation
