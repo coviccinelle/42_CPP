@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 20:46:37 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 21:15:54 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,52 +60,43 @@ ClapTrap & ClapTrap::operator=(const ClapTrap & fx)//copy assignment operator ov
 
 void    ClapTrap::attack(const std::string & target)
 {
-    if (/*this->_HitPoints > 0 && */this->_EnergyPoints > 0)
+    if (this->_EnergyPoints > 0)
     {
         this->_EnergyPoints -= 1;
-        std::cout << "[ClapTrap]: " << this->_Name << " attacks " << target << ", causing ";
+        std::cout << "[Attack]: " << this->_Name << " attacks " << target << ", causing ";
         std::cout << _AttackDamage << " points of damage!" << std::endl;
     }
     else
-        std::cout << "Error: Can't attack: Not enough [Energy points]!" << std::endl;
+        std::cout << "⚠️ 🚧 🚸 ERROR :: Can't attack: Not enough [Energy points]!" << std::endl;
     return ;
 }
 
 
 void    ClapTrap::takeDamage(unsigned int amount)
 {
-    if (this->_HitPoints >= 1)
+    if (this->_HitPoints > 0)
     {
         if (amount > this->_HitPoints)
             this->_HitPoints = 0;
         else
             this->_HitPoints -= amount;
-        this->_EnergyPoints -= 1;
-        std::cout << "Take damage function called" << std::endl;
+        std::cout << "[Take damage] : " << this->_Name << " takes " << amount << " of damage from the enemy"<< std::endl;
     }
     else
-        std::cout << "Error: Can't take damage. Not enough [Energy points]!" << std::endl;
+        std::cout << "⚠️ 🚧 🚸 ERROR :: Can't take damage. Not enough [Hit points]! (You died already dude)" << std::endl;
     return ;
 }
 
 void    ClapTrap::beRepaired(unsigned int amount)
 {
-    // unsigned int     a;
-    // a = this->_HitPoints;
-    //if (a <= (10 - amount) && this->_EnergyPoints >= 1)
-    if (/*this->_HitPoints <= (10 - amount) && */this->_EnergyPoints >= 1)
+    if (this->_EnergyPoints > 0)
     {
         this->_HitPoints += amount;
         this->_EnergyPoints -= 1;
-        std::cout << "[beRepaired] function called" << std::endl;
-    }
-    else if (this->_HitPoints > (10 - amount))
-    {
-        std::cout << "Error: Can't repaire: [Hit Points] is full !" << std::endl;
-        //this->_HitPoints = 10;
+        std::cout << "[beRepaired] " << this->_Name << " repaired " << amount << " points of HitPoints" << std::endl;
     }
     else
-        std::cout << "Error: Can't repaire: Not enough [Energy points]!" << std::endl;
+        std::cout << "⚠️ 🚧 🚸 ERROR :: Can't repaire: Not enough [Energy points]!" << std::endl;
     return ;
 }
 
@@ -138,8 +129,8 @@ unsigned int		ClapTrap::getAttackd(void) const
 void	ClapTrap::annonce(void)const
 {
 	std::cout << std::endl;
-	std::cout << "ClapTrap's Energy points = " << this->_EnergyPoints << std::endl;
-	std::cout << "ClapTrap's Hit points = " << this->_HitPoints << std::endl;
+	std::cout << this->_Name << "'s Energy points = " << this->_EnergyPoints << std::endl;
+	std::cout << this->_Name << "'s Hit points = " << this->_HitPoints << std::endl;
 	std::cout << std::endl;
 }
 
