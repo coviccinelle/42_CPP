@@ -6,15 +6,22 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 14:35:38 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 15:07:48 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void)
+ClapTrap::ClapTrap(void) : _Name("Default")
 {
     std::cout << "Default constructor called hihi" << std::endl;
+    return ;
+}
+
+
+ClapTrap::ClapTrap(std::string name) : _Name(name)
+{
+    std::cout << "Name constructor called" << std::endl;
     return ;
 }
 
