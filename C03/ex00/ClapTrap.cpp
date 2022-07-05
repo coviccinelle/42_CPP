@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 13:21:54 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 14:35:38 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,31 @@ ClapTrap::ClapTrap(ClapTrap const & fx)    //canonical copy constructor
 
 ClapTrap & ClapTrap::operator=(const ClapTrap & fx)//copy assignment operator overload
 {
+    // init values
     std::cout << "Copy assignment operator called" << std::endl;
+
+    this->_Name = fx.getName();
+    this->_HitPoints = fx.getHitp();
+    this->_EnergyPoints = fx.getEnergyp();
+    this->_AttackDamage = fx.getAttackd();
     
-    this->_HitPoints = takeDamage(3);
     return *this;
 }
+
+
+//////////////////////////////////////////////////
+///				Action Functions	    	   ///
+//////////////////////////////////////////////////
 
 
 void    ClapTrap::attack(const std::string & target)
 {
     if (this->_HitPoints > 0 && this->_EnergyPoints > 0)
-        std::cout << " attacks " << & target << ", causing " << this->takeDamage(3) << std::endl;
+    {
+        this->_EnergyPoints -= 1;
+        std::cout << "ClapTrap " << this->_Name << " attacks " << target << ", causing ";
+        std::cout << _AttackDamage << " points of damage!" << std::endl;
+    }
     else
         std::cout << "Error: Not enough [Hit Points] or [Energy Points]" << std::endl;
     return ;
@@ -77,6 +91,40 @@ void    ClapTrap::beRepaired(unsigned int amount)
     else
         std::cout << "Error: Can't repaire. Not enough [Energy points] or [Hit Points] is full !" << std::endl;
     return ;
+}
+
+
+
+//////////////////////////////////////////////////
+///				Get Functions				   ///
+//////////////////////////////////////////////////
+
+std::string	ClapTrap::getName(void) const
+{
+	return (this->_Name);
+}
+
+unsigned int		ClapTrap::getHitp(void) const
+{
+	return (this->_HitPoints);
+}
+
+unsigned int		ClapTrap::getEnergyp(void) const
+{
+	return (this->_EnergyPoints);
+}
+
+unsigned int		ClapTrap::getAttackd(void) const
+{
+	return (this->_AttackDamage);
+}
+
+void	ClapTrap::annonce(void)const
+{
+	std::cout << std::endl;
+	std::cout << "ClapTrap's Energy points = " << this->_EnergyPoints << std::endl;
+	std::cout << "ClapTrap's Hit points = " << this->_HitPoints << std::endl;
+	std::cout << std::endl;
 }
 
 

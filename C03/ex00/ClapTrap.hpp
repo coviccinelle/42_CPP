@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 14:07:13 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 14:52:02 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ class ClapTrap
         ClapTrap & operator= ( const ClapTrap & fx);    //canonical copy assignment operator overload
 		virtual ~ClapTrap(void);				        //canonical default destructor 
                                                         //virtual avoid memory leaks in case of inheritance class
-        // ~ClapTrap(void);
-        
         ClapTrap(std::string    Name);
 
         void    attack(const std::string & target);
@@ -35,16 +33,16 @@ class ClapTrap
         void    beRepaired(unsigned int amount);
 		void	annonce(void)const;
 
-		std::string	getName(void)const;
-		int			getHitp(void)const;
-		int			getEnergyp(void)const;
-		int			getAttackd(void)const;
+		std::string	    getName(void)const;
+		unsigned int    getHitp(void)const;
+		unsigned int	getEnergyp(void)const;
+		unsigned int	getAttackd(void)const;
                 
     private:
         std::string     _Name;
-        unsigned int    _HitPoints = 10;
-        unsigned int    _EnergyPoints = 10;
-        unsigned int    _AttackDamage = 0;
+        unsigned int    _HitPoints;
+        unsigned int    _EnergyPoints;
+        unsigned int    _AttackDamage;
 };
 
 //std::ostream & operator << (std::ostream & sortie, const ClapTrap & fx);
