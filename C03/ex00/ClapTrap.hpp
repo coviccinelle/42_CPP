@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 13:32:33 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/05 14:05:08 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,10 @@ class ClapTrap
         
         ClapTrap(std::string    Name);
 
-        attack(const std::string & target);
-        takeDamage(unsigned int amount);
-        beRepaired(unsigned int amount);
+        void    attack(const std::string & target);
+        void    takeDamage(unsigned int amount);
+        void    beRepaired(unsigned int amount);
 
-
-    ClapTrap & operator= ( const ClapTrap & fx);	//canonical surcharge de l'operation d'affectation
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 		void	attack(const std::string &target);
@@ -45,14 +43,12 @@ class ClapTrap
 		int			getHitp(void)const;
 		int			getEnergyp(void)const;
 		int			getAttackd(void)const;
-        
-        
+                
     private:
-        std::string   _Name;
-        int           _HitPoints = 10;
-        int           _EnergyPoints = 10;
-        int           _AttackDamage = 0;
-        
+        std::string     _Name;
+        unsigned int    _HitPoints = 10;
+        unsigned int    _EnergyPoints = 10;
+        unisgned int    _AttackDamage = 0;
 };
 
 //std::ostream & operator << (std::ostream & sortie, const ClapTrap & fx);
