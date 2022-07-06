@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 21:15:54 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/06 11:22:52 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 ClapTrap::ClapTrap(void) : _Name("Default"), _HitPoints(10), _EnergyPoints(10), _AttackDamage(0)
 {
-    std::cout << "Default constructor called hihi" << std::endl;
+    std::cout << "Default constructor [ClapTrap] called" << std::endl;
     return ;
 }
 
 
 ClapTrap::ClapTrap(std::string name) : _Name(name), _HitPoints(10), _EnergyPoints(10), _AttackDamage(0)
 {
-    std::cout << "Name constructor called" << std::endl;
+    std::cout << "Name constructor [ClapTrap] called" << std::endl;
     return ;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "Destructor [ClapTrap] called" << std::endl;
     return ;
 }
 
 
 ClapTrap::ClapTrap(ClapTrap const & fx)    //canonical copy constructor
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Copy constructor [ClapTrap] called" << std::endl;
     *this = fx;
     return ;
 }
@@ -42,7 +42,7 @@ ClapTrap::ClapTrap(ClapTrap const & fx)    //canonical copy constructor
 ClapTrap & ClapTrap::operator=(const ClapTrap & fx)//copy assignment operator overload
 {
     // init values
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "Copy assignment operator [ClapTrap] called" << std::endl;
 
     this->_Name = fx.getName();
     this->_HitPoints = fx.getHitp();
@@ -129,16 +129,9 @@ unsigned int		ClapTrap::getAttackd(void) const
 void	ClapTrap::annonce(void)const
 {
 	std::cout << std::endl;
+    std::cout << "// ------------ *** ANOUNCE *** -------------- //" << std::endl;
 	std::cout << this->_Name << "'s Energy points = " << this->_EnergyPoints << std::endl;
 	std::cout << this->_Name << "'s Hit points = " << this->_HitPoints << std::endl;
 	std::cout << std::endl;
 }
 
-
-// // An overload of the insertion («) operator that inserts a floating-point representation
-// // of the fixed-point number into the output stream object passed as parameter.
-// std::ostream & operator << (std::ostream & cout, const ClapTrap & fx)
-// {
-// 	cout << fx.toFloat();
-// 	return (cout);
-// }

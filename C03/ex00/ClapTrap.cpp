@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 21:15:54 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/06 11:23:08 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,12 +133,3 @@ void	ClapTrap::annonce(void)const
 	std::cout << this->_Name << "'s Hit points = " << this->_HitPoints << std::endl;
 	std::cout << std::endl;
 }
-
-
-// // An overload of the insertion («) operator that inserts a floating-point representation
-// // of the fixed-point number into the output stream object passed as parameter.
-// std::ostream & operator << (std::ostream & cout, const ClapTrap & fx)
-// {
-// 	cout << fx.toFloat();
-// 	return (cout);
-// }
