@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/06 11:14:27 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/06 13:30:20 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int main(void)
 {
-	ScavTrap scav("Tintin");
+	ScavTrap scav("Tom 🐱 ");
 	std::cout << "-------------- We create the Instance ------------------" << std::endl;
 	std::cout << scav << std::endl;
 
 	std::cout << "-------------- Attack function ------------------" << std::endl;
-	scav.attack("Milou");
+	scav.attack("Jerry 🐭 ");
 	std::cout << scav << std::endl;
 	
 	
