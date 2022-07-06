@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 21:18:38 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/06 10:17:10 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int main( void )
     Fighter.attack("Jerry");
 
 
-	std::cout << std::endl << "------------ Should not working anymore ------------------" << std::endl << std::endl;
+	std::cout << std::endl << "------------ Should not work anymore ------------------" << std::endl << std::endl;
 	
 	Fighter.attack("Jerry");
 	Fighter.annonce();
@@ -62,7 +62,7 @@ int main( void )
 	Fighter.takeDamage(15);
 	Fighter.annonce();
 
-	std::cout << "------------ Should not working anymore ------------------" << std::endl;
+	std::cout << "------------ Should not work anymore ------------------" << std::endl;
 	std::cout  <<  std::endl;
 	Fighter.takeDamage(15);
 	Fighter.annonce();
