@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/05 20:52:54 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/06 10:37:53 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class ClapTrap
 		unsigned int	getEnergyp(void)const;
 		unsigned int	getAttackd(void)const;
                 
-    private:
+    protected:
         std::string     _Name;
         unsigned int    _HitPoints;
         unsigned int    _EnergyPoints;
