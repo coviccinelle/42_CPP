@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/06 11:23:08 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/06 11:53:51 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void    ClapTrap::beRepaired(unsigned int amount)
         std::cout << "[beRepaired] " << this->_Name << " repaired " << amount << " points of HitPoints" << std::endl;
     }
     else
-        std::cout << "⚠️ 🚧 🚸 ERROR :: Can't repaire: Not enough [Energy points]!" << std::endl;
+        std::cout << "" << std::endl;
     return ;
 }
 
