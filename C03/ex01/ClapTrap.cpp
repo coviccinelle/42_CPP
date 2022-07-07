@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/06 11:22:52 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/07 11:30:21 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,3 +135,9 @@ void	ClapTrap::annonce(void)const
 	std::cout << std::endl;
 }
 
+// std::ostream & operator << (std::ostream & cou, const ClapTrap & fx)
+// {
+// 	std::cout << "Hehe nothing is going to appear but Here I Am in the operator << of CLAPTRAP hihi" << std::endl;
+// 	std::cout << fx.getName() << std::endl;
+// 	return (cou);
+// }

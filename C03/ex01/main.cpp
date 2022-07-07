@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/06 15:11:05 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/07 11:35:20 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int main(void)
 	ScavTrap scav("Tom 🐱 ");
 	std::cout << "-------------- [ Instance created ] ------------------" << std::endl;
 	std::cout << scav << std::endl;
+	//std::ostream & operator << (std::ostream & cout, const ScavTrap & fx)
+	// -> Thanks to this function = announce function dude, magic right?
 
 	std::cout << "-------------- [ Attack function ] ------------------" << std::endl;
 	scav.attack("Jerry 🐭 ");
