@@ -6,33 +6,33 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/07 11:35:20 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/07 12:02:34 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
-	ScavTrap scav("Tom 🐱 ");
+	FragTrap Frag("Tom 🐱 ");
 	std::cout << "-------------- [ Instance created ] ------------------" << std::endl;
-	std::cout << scav << std::endl;
-	//std::ostream & operator << (std::ostream & cout, const ScavTrap & fx)
+	std::cout << Frag << std::endl;
+	//std::ostream & operator << (std::ostream & cout, const FragTrap & fx)
 	// -> Thanks to this function = announce function dude, magic right?
 
 	std::cout << "-------------- [ Attack function ] ------------------" << std::endl;
-	scav.attack("Jerry 🐭 ");
-	std::cout << scav << std::endl;
+	Frag.attack("Jerry 🐭 ");
+	std::cout << Frag << std::endl;
 	
 	
 	std::cout << "-------------- [ Damage function ] ------------------" << std::endl;
-	scav.ClapTrap::takeDamage(12);
-	std::cout << scav << std::endl;
+	Frag.ClapTrap::takeDamage(12);
+	std::cout << Frag << std::endl;
 
 
-	std::cout << "-------------- [ Guard Gate function ] ------------------" << std::endl;
-	scav.guardGate();
-	std::cout << scav << std::endl;
+	std::cout << "-------------- [ High Five function ] ------------------" << std::endl;
+	Frag.highFivesGuys(5);
+	std::cout << Frag << std::endl;
 
 	return (0);    
 }

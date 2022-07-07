@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 10:47:31 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/07 11:30:34 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/07 12:08:51 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,6 @@ std::ostream & operator << (std::ostream & cout, const ScavTrap & fx)
 	if (fx.getGate() == 0)
 		std::cout << "OFF! 🙁" << std::endl;
 	else
-		cout << "ON!!! 😊" << std::endl;
+		std::cout << "ON!!! 😊" << std::endl;
 	return (cout);
 }

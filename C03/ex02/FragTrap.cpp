@@ -3,11 +3,92 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thi-phng <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:52:20 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/07 11:52:23 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/07 12:11:24 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "FragTrap.hpp"
 
+FragTrap::FragTrap(void) : ClapTrap("Default"), _gate(false)
+{
+	std::cout << "Default construtor [FragTrap] called" << std::endl;
+	this->_HitPoints = 100;
+	this->_EnergyPoints = 50;
+	this->_AttackDamage = 20;
+	return ;
+}
+
+FragTrap::FragTrap(std::string name) : ClapTrap(name), _gate(false)
+{
+	std::cout << "Constructor string [FragTrap] called" << std::endl;
+	this->_HitPoints = 100;
+	this->_EnergyPoints = 50;
+	this->_AttackDamage = 20;
+}
+
+FragTrap::FragTrap(FragTrap const & fx) : ClapTrap(fx)
+{
+	*this = fx;
+	return ;
+}
+
+FragTrap &FragTrap::operator=(const FragTrap & fx)
+{
+	ClapTrap::operator=(fx);
+	this->_gate = fx._gate;
+	std::cout << "[FragTrap] assignement operator called" << std::endl;
+	return (*this);
+}
+
+FragTrap::~FragTrap(void)
+{
+	std::cout << "Destructor [FragTrap] Called" << std::endl;
+	return ;
+}
+
+//---------------------------------//
+
+void    FragTrap::attack(const std::string target)// canonical copy assignment operator overload -> redefine a function that exist already in the parent's class
+{
+    if (this->_EnergyPoints > 0)
+    {
+        this->_EnergyPoints -= 1;
+        std::cout << "[FragTrap]: [Attack]: " << this->_Name << " attacks " << target << ", causing ";
+        std::cout << _AttackDamage << " points of damage!" << std::endl;
+    }
+    else
+        std::cout << "⚠️ 🚧 🚸 ERROR :[FragTrap]: Can't attack: Not enough [Energy points]!" << std::endl;
+    return ;
+}
+
+//=================================//
+
+void	FragTrap::highFiveGuys(int number)
+{
+	this->HighFives = number;
+}
+
+int		FragTrap::getHigh5(void) const
+{
+	return(this->_HighFives);
+}
+
+// An overload of the insertion («) operator that inserts a floating-point representation
+// of the fixed-point number into the output stream object passed as paramete
+std::ostream & operator << (std::ostream & sortie, const FragTrap & fx)
+{
+	std::cout << "Name = ";
+	cout << fx.getName() << std::endl;
+	std::cout << "Hit points = ";
+	cout << fx.getHitp() << std::endl;
+	std::cout << "Energy points = ";
+	cout << fx.getEnergyp() << std::endl;
+	std::cout << "Attack damage = ";
+	cout << fx.getAttackd() << std::endl;
+	std::cout << "High five count is: ";
+    std::cout << fx.getHigh5 << std::endl;
+	return (sortie);
+}
