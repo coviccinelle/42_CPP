@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:52:20 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/07 13:37:52 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/07 13:44:42 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void    FragTrap::attack(const std::string target)// canonical copy assignment o
 
 void	FragTrap::highFiveGuys(void)
 {
-    std::cout <<  << std::endl;
+    std::cout << "Hello " << this->_Name << "Give me a highfive ✋" << std::endl;
 	//this->HighFives = number;
 }
 

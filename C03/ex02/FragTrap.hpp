@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:52:31 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/07 13:37:07 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/07 13:45:01 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class FragTrap : public ClapTrap
 		virtual ~FragTrap();						//canonical: destructeur par defaut
 
 		void	attack(std::string name);
-		void	highFivesGuys(int);
+		void	highFivesGuys(void);
 		int		getHigh5(void) const;
 
 	// private:
