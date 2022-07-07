@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:52:20 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/07 12:11:24 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/07 12:24:00 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ FragTrap::FragTrap(void) : ClapTrap("Default"), _gate(false)
 {
 	std::cout << "Default construtor [FragTrap] called" << std::endl;
 	this->_HitPoints = 100;
-	this->_EnergyPoints = 50;
-	this->_AttackDamage = 20;
+	this->_EnergyPoints = 100;
+	this->_AttackDamage = 30;
 	return ;
 }
 
@@ -25,8 +25,8 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name), _gate(false)
 {
 	std::cout << "Constructor string [FragTrap] called" << std::endl;
 	this->_HitPoints = 100;
-	this->_EnergyPoints = 50;
-	this->_AttackDamage = 20;
+	this->_EnergyPoints = 100;
+	this->_AttackDamage = 30;
 }
 
 FragTrap::FragTrap(FragTrap const & fx) : ClapTrap(fx)
@@ -38,7 +38,10 @@ FragTrap::FragTrap(FragTrap const & fx) : ClapTrap(fx)
 FragTrap &FragTrap::operator=(const FragTrap & fx)
 {
 	ClapTrap::operator=(fx);
-	this->_gate = fx._gate;
+    this->_Name = fx.getName();
+    this->_HitPoints = fx.getHitp();
+    this->_EnergyPoints = fx.getEnergyp();
+    this->_AttackDamage = fx.getAttackd();
 	std::cout << "[FragTrap] assignement operator called" << std::endl;
 	return (*this);
 }
@@ -66,6 +69,7 @@ void    FragTrap::attack(const std::string target)// canonical copy assignment o
 
 //=================================//
 
+
 void	FragTrap::highFiveGuys(int number)
 {
 	this->HighFives = number;
@@ -86,8 +90,6 @@ std::ostream & operator << (std::ostream & sortie, const FragTrap & fx)
 	cout << fx.getHitp() << std::endl;
 	std::cout << "Energy points = ";
 	cout << fx.getEnergyp() << std::endl;
-	std::cout << "Attack damage = ";
-	cout << fx.getAttackd() << std::endl;
 	std::cout << "High five count is: ";
     std::cout << fx.getHigh5 << std::endl;
 	return (sortie);
