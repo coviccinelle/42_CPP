@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/08 14:17:26 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/08 14:59:49 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main(void)
 
 	std::cout << "-------------- [ High Five function ] ------------------" << std::endl;
 	Frag.highFiveGuys();
-	//std::cout << Frag << std::endl;
+	std::cout << Frag << std::endl;
 
 	return (0);    
 }

@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:52:20 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/08 14:13:48 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:05:23 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,27 @@ void    FragTrap::attack(const std::string target)// canonical copy assignment o
 
 void	FragTrap::highFiveGuys(void)
 {
-    std::cout << "Hello " << this->_Name << "Give me a highfive ✋" << std::endl;
+    // std::cout << "Hello " << this->_Name << "Give me a highfives ✋" << std::endl;
+	if (this->_EnergyPoints < 1)
+		std::cout << "⚠️ 🚧 🚸 ERROR :[FragTrap]: Can't high fives: Not enough [Energy points]!" << std::endl;
+	else
+	{
+		std::string	cmd;
+		std::cout << "Hey hey! How are you doing? Give a high fives ✋! (type [high fives please])" << std::endl;
+		std::getline(std::cin, cmd);
+		if (cmd == "high fives please")
+		{
+			this->_highFives = true;
+			std::cout << "Thank you for the high fives!!^^" << std::endl;
+		}
+		else
+			std::cout << "No? Aukay! Nevermind, it's fine, I get rejected all the time..." << std::endl;
+	}
+}
+
+int	FragTrap::getHighFives(void) const
+{
+	return(this->_highFives);
 }
 
 //=================================//
@@ -86,5 +106,10 @@ std::ostream & operator << (std::ostream & sortie, const FragTrap & fx)
 	sortie << fx.getEnergyp() << std::endl;
 	std::cout << "Attack Damage points = ";
 	sortie << fx.getAttackd() << std::endl;
+	std::cout << "High five status = " << std::endl;
+	if (fx.getAttackd() == true)
+		std::cout << "Status : ON ! Yes, I got a high five, I'm so happy 😊" << std::endl;
+	else
+		std::cout << "Status : OFF! Nah, I'm still waiting for my high five 🙁" << std::endl;
 	return (sortie);
 }
