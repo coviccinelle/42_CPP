@@ -6,12 +6,12 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/08 13:58:46 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/08 14:11:38 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
-//#include "ScavTrap.hpp"
+// #include "ScavTrap.hpp"
 
 int main(void)
 {
@@ -19,6 +19,12 @@ int main(void)
 	// std::cout << "-------------- [ Instance created ] ------------------" << std::endl;
 	// std::cout << Scav << std::endl;
 	// std::ostream & operator << (std::ostream & cout, const FragTrap & fx);
+
+
+	// std::cout << "-------------- [ Damage function ] ------------------" << std::endl;
+	// Scav.ClapTrap::takeDamage(12);
+	// Scav.guardGate();
+	// std::cout << Scav << std::endl;
 
 	
 	FragTrap Frag("Frag Tom 🐱 ");

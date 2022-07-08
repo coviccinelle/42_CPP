@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 10:47:47 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/07 11:53:59 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/08 14:06:09 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@
 class ScavTrap : public ClapTrap
 {
 	public:
-		ScavTrap();									//canonical: constrcuteur par defaut
+		ScavTrap();									//canonical default constructeur
+		ScavTrap(ScavTrap const &rhs);				//canonical copy constructor
+		ScavTrap & operator= (const ScavTrap & rhs);//canonical copy assignment operator overload
+		virtual ~ScavTrap();						//canonical default destructor 
+                                                    //virtual avoid memory leaks in case of inheritance class
 		ScavTrap(std::string name);
-		ScavTrap(ScavTrap const &rhs);				//canonical: constructeur de recopie
-		ScavTrap & operator= (const ScavTrap & rhs);//canonical: surcharge de l'operator d'affectation
-		virtual ~ScavTrap();						//canonical: destructeur par defaut
 
 		void	attack(std::string name);
 		void	guardGate(void);

@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 10:47:31 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/07 11:30:34 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/08 14:08:23 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ ScavTrap::~ScavTrap(void)
 	return ;
 }
 
-//---------------------------------//
+//----------------- ACTION FUNCTIONS ----------------//
 
 void    ScavTrap::attack(const std::string target)// canonical copy assignment operator overload -> redefine a function that exist already in the parent's class
 {
@@ -64,8 +64,6 @@ void    ScavTrap::attack(const std::string target)// canonical copy assignment o
     return ;
 }
 
-//=================================//
-
 void	ScavTrap::guardGate(void)
 {
 	if (this->_EnergyPoints <= 0)
@@ -76,6 +74,9 @@ void	ScavTrap::guardGate(void)
 		std::cout << "[Scav Trap] came into guard Gate mode" << std::endl;
 	}
 }
+
+//============== GET FUNCTIONS ===================//
+
 int		ScavTrap::getGate(void) const
 {
 	return(this->_gate);
@@ -83,20 +84,20 @@ int		ScavTrap::getGate(void) const
 
 // An overload of the insertion («) operator that inserts a floating-point representation
 // of the fixed-point number into the output stream object passed as paramete
-std::ostream & operator << (std::ostream & cout, const ScavTrap & fx)
+std::ostream & operator << (std::ostream & sortie, const ScavTrap & fx)
 {
 	std::cout << "Name = ";
-	cout << fx.getName() << std::endl;
+	sortie << fx.getName() << std::endl;
 	std::cout << "Hit points = ";
-	cout << fx.getHitp() << std::endl;
+	sortie << fx.getHitp() << std::endl;
 	std::cout << "Energy points = ";
-	cout << fx.getEnergyp() << std::endl;
+	sortie << fx.getEnergyp() << std::endl;
 	std::cout << "Attack damage = ";
-	cout << fx.getAttackd() << std::endl;
+	sortie << fx.getAttackd() << std::endl;
 	std::cout << "Gate mode is ";
 	if (fx.getGate() == 0)
 		std::cout << "OFF! 🙁" << std::endl;
 	else
-		cout << "ON!!! 😊" << std::endl;
-	return (cout);
+		sortie << "ON!!! 😊" << std::endl;
+	return (sortie);
 }

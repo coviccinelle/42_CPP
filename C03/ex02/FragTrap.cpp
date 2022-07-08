@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:52:20 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/08 12:32:51 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/08 14:13:48 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ FragTrap::~FragTrap(void)
 	return ;
 }
 
-//---------------------------------//
+//-------------*** Action Functions ***--------------//
 
 void    FragTrap::attack(const std::string target)// canonical copy assignment operator overload -> redefine a function that exist already in the parent's class
 {
@@ -67,46 +67,24 @@ void    FragTrap::attack(const std::string target)// canonical copy assignment o
     return ;
 }
 
-//=================================//
-
-
 void	FragTrap::highFiveGuys(void)
 {
     std::cout << "Hello " << this->_Name << "Give me a highfive ✋" << std::endl;
 }
 
+//=================================//
 
 // An overload of the insertion («) operator that inserts a floating-point representation
 // of the fixed-point number into the output stream object passed as paramete
-
-
-// std::ostream & operator << (std::ostream & sortie, const FragTrap & fx)
-// {
-// 	std::cout << "Name = ";
-// 	cout << fx.getName() << std::endl;
-// 	std::cout << "Hit points = ";
-// 	cout << fx.getHitp() << std::endl;
-// 	std::cout << "Energy points = ";
-// 	cout << fx.getEnergyp() << std::endl;
-// 	// std::cout << "High five count is: ";
-//     // std::cout << fx.getHigh5 << std::endl;
-// 	return (sortie);
-// }
-
-std::ostream & operator << (std::ostream & cout, const FragTrap & fx)
+std::ostream & operator << (std::ostream & sortie, const FragTrap & fx)
 {
 	std::cout << "Name = ";
-	cout << fx.getName() << std::endl;
+	sortie << fx.getName() << std::endl;
 	std::cout << "Hit points = ";
-	cout << fx.getHitp() << std::endl;
+	sortie << fx.getHitp() << std::endl;
 	std::cout << "Energy points = ";
-	cout << fx.getEnergyp() << std::endl;
-	std::cout << "Attack damage = ";
-	cout << fx.getAttackd() << std::endl;
-	// std::cout << "Gate mode is ";
-	// if (fx.getGate() == 0)
-	// 	std::cout << "OFF! 🙁" << std::endl;
-	// else
-	// 	cout << "ON!!! 😊" << std::endl;
-	return (cout);
+	sortie << fx.getEnergyp() << std::endl;
+	std::cout << "Attack Damage points = ";
+	sortie << fx.getAttackd() << std::endl;
+	return (sortie);
 }
