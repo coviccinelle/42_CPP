@@ -6,7 +6,7 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/07 11:39:16 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/08 13:48:30 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
 SRC		=	ClapTrap.cpp \
 			ScavTrap.cpp \
+			FragTrap.cpp \
 			main.cpp
 
 OBJDIR	=	objs
