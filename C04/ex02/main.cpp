@@ -6,44 +6,66 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/08 10:59:30 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/06 10:17:10 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
-//#include "ScavTrap.hpp"
+#include <iostream>
+#include "ClapTrap.hpp"
 
-int main(void)
+int main( void ) 
 {
-	// ScavTrap Scav("Tom 🐱 ");
-	// std::cout << "-------------- [ Instance created ] ------------------" << std::endl;
-	// std::cout << Scav << std::endl;
-	//std::ostream & operator << (std::ostream & cout, const FragTrap & fx)
+	ClapTrap Fighter("Tom");
+	std::cout  << Fighter.getName() << " was born" << std::endl;
 
+    Fighter.annonce();
 
+    std::cout  <<  std::endl;
+	Fighter.attack("Jerry");
+	Fighter.annonce();
+    
+    std::cout  <<  std::endl;
+	Fighter.beRepaired(2);
+	Fighter.annonce();
 
+    std::cout  <<  std::endl;
+	Fighter.takeDamage(15);
+	Fighter.annonce();
 	
-	//FragTrap Frag("Frag Tom 🐱 ");
-	FragTrap Frag;
-	std::cout << "-------------- [ Instance created ] ------------------" << std::endl;
-	std::cout << Frag << std::endl;
-	std::ostream & operator << (std::ostream & cout, const FragTrap & fx);
-	// -> Thanks to this function = announce function dude, magic right?
+    std::cout  <<  std::endl;
+	Fighter.attack("Jerry");
+	Fighter.annonce();
 
-	std::cout << "-------------- [ Attack function ] ------------------" << std::endl;
-	//Frag.attack("Jerry 🐭 ");
-	//std::cout << Frag << std::endl;
+    std::cout  <<  std::endl;
+	Fighter.beRepaired(22);
+	Fighter.annonce();
+
+    std::cout  <<  std::endl;
+	Fighter.takeDamage(10);
+	Fighter.annonce();
 	
 	
-	// std::cout << "-------------- [ Damage function ] ------------------" << std::endl;
-	// Frag.ClapTrap::takeDamage(12);
-	// std::cout << Frag << std::endl;
+	Fighter.attack("Jerry");
+	Fighter.attack("Jerry");
+	Fighter.attack("Jerry");
+    Fighter.attack("Jerry");
+    Fighter.attack("Jerry");
+    Fighter.attack("Jerry");
 
 
-	std::cout << "-------------- [ High Five function ] ------------------" << std::endl;
-	//Frag.highFivesGuys();
-	//std::cout << Frag << std::endl;
+	std::cout << std::endl << "------------ Should not work anymore ------------------" << std::endl << std::endl;
+	
+	Fighter.attack("Jerry");
+	Fighter.annonce();
 
-	return (0);    
+	std::cout  <<  std::endl;
+	Fighter.takeDamage(15);
+	Fighter.annonce();
+
+	std::cout << "------------ Should not work anymore ------------------" << std::endl;
+	std::cout  <<  std::endl;
+	Fighter.takeDamage(15);
+	Fighter.annonce();
+	
+	return (0); 
 }
