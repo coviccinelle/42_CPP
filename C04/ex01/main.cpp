@@ -6,33 +6,66 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/07 11:35:20 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/06 10:17:10 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include <iostream>
+#include "ClapTrap.hpp"
 
-int main(void)
+int main( void ) 
 {
-	ScavTrap scav("Tom 🐱 ");
-	std::cout << "-------------- [ Instance created ] ------------------" << std::endl;
-	std::cout << scav << std::endl;
-	//std::ostream & operator << (std::ostream & cout, const ScavTrap & fx)
-	// -> Thanks to this function = announce function dude, magic right?
+	ClapTrap Fighter("Tom");
+	std::cout  << Fighter.getName() << " was born" << std::endl;
 
-	std::cout << "-------------- [ Attack function ] ------------------" << std::endl;
-	scav.attack("Jerry 🐭 ");
-	std::cout << scav << std::endl;
+    Fighter.annonce();
+
+    std::cout  <<  std::endl;
+	Fighter.attack("Jerry");
+	Fighter.annonce();
+    
+    std::cout  <<  std::endl;
+	Fighter.beRepaired(2);
+	Fighter.annonce();
+
+    std::cout  <<  std::endl;
+	Fighter.takeDamage(15);
+	Fighter.annonce();
+	
+    std::cout  <<  std::endl;
+	Fighter.attack("Jerry");
+	Fighter.annonce();
+
+    std::cout  <<  std::endl;
+	Fighter.beRepaired(22);
+	Fighter.annonce();
+
+    std::cout  <<  std::endl;
+	Fighter.takeDamage(10);
+	Fighter.annonce();
 	
 	
-	std::cout << "-------------- [ Damage function ] ------------------" << std::endl;
-	scav.ClapTrap::takeDamage(12);
-	std::cout << scav << std::endl;
+	Fighter.attack("Jerry");
+	Fighter.attack("Jerry");
+	Fighter.attack("Jerry");
+    Fighter.attack("Jerry");
+    Fighter.attack("Jerry");
+    Fighter.attack("Jerry");
 
 
-	std::cout << "-------------- [ Guard Gate function ] ------------------" << std::endl;
-	scav.guardGate();
-	std::cout << scav << std::endl;
+	std::cout << std::endl << "------------ Should not work anymore ------------------" << std::endl << std::endl;
+	
+	Fighter.attack("Jerry");
+	Fighter.annonce();
 
-	return (0);    
+	std::cout  <<  std::endl;
+	Fighter.takeDamage(15);
+	Fighter.annonce();
+
+	std::cout << "------------ Should not work anymore ------------------" << std::endl;
+	std::cout  <<  std::endl;
+	Fighter.takeDamage(15);
+	Fighter.annonce();
+	
+	return (0); 
 }

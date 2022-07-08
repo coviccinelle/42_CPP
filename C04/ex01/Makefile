@@ -6,16 +6,17 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/06 10:34:52 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/08 11:30:29 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Serena_my_love!
+NAME	=	I_dont_want_to_set_the_world_on_fire
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
-SRC		=	ClapTrap.cpp \
-			ScavTrap.cpp \
+SRC		=	Animal.cpp \
+			Dog.cpp \
+			Cat.cpp \
 			main.cpp
 
 OBJDIR	=	objs
