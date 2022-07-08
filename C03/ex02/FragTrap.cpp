@@ -6,13 +6,13 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:52:20 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/07 13:44:42 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/08 10:51:24 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void) : ClapTrap("Default"), _gate(false)
+FragTrap::FragTrap(void) : ClapTrap("Default")
 {
 	std::cout << "Default construtor [FragTrap] called" << std::endl;
 	this->_HitPoints = 100;
@@ -21,7 +21,7 @@ FragTrap::FragTrap(void) : ClapTrap("Default"), _gate(false)
 	return ;
 }
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name), _gate(false)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "Constructor string [FragTrap] called" << std::endl;
 	this->_HitPoints = 100;
@@ -83,7 +83,22 @@ void	FragTrap::highFiveGuys(void)
 
 // An overload of the insertion («) operator that inserts a floating-point representation
 // of the fixed-point number into the output stream object passed as paramete
-std::ostream & operator << (std::ostream & sortie, const FragTrap & fx)
+
+
+// std::ostream & operator << (std::ostream & sortie, const FragTrap & fx)
+// {
+// 	std::cout << "Name = ";
+// 	cout << fx.getName() << std::endl;
+// 	std::cout << "Hit points = ";
+// 	cout << fx.getHitp() << std::endl;
+// 	std::cout << "Energy points = ";
+// 	cout << fx.getEnergyp() << std::endl;
+// 	// std::cout << "High five count is: ";
+//     // std::cout << fx.getHigh5 << std::endl;
+// 	return (sortie);
+// }
+
+std::ostream & operator << (std::ostream & cout, const FragTrap & fx)
 {
 	std::cout << "Name = ";
 	cout << fx.getName() << std::endl;
@@ -91,7 +106,12 @@ std::ostream & operator << (std::ostream & sortie, const FragTrap & fx)
 	cout << fx.getHitp() << std::endl;
 	std::cout << "Energy points = ";
 	cout << fx.getEnergyp() << std::endl;
-	// std::cout << "High five count is: ";
-    // std::cout << fx.getHigh5 << std::endl;
-	return (sortie);
+	std::cout << "Attack damage = ";
+	cout << fx.getAttackd() << std::endl;
+	// std::cout << "Gate mode is ";
+	// if (fx.getGate() == 0)
+	// 	std::cout << "OFF! 🙁" << std::endl;
+	// else
+	// 	cout << "ON!!! 😊" << std::endl;
+	return (cout);
 }
