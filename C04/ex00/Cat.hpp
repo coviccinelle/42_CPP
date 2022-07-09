@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:13:34 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/09 18:46:27 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/09 19:56:55 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 #include "Animal.hpp"
 
-class WrongCat : public Animal
+class Cat : public Animal
 {
     public:
-        WrongCat(void);                        //canonical default constructor
-        WrongCat(WrongCat const & fx);              //canonical copy constructor
-        WrongCat & operator= (const WrongCat & fx); //canonical copy assignment operator overload
-        virtual ~WrongCat(void);                   //canonical destructor
+        Cat(void);                        //canonical default constructor
+        Cat(Cat const & fx);              //canonical copy constructor
+        Cat & operator= (const Cat & fx); //canonical copy assignment operator overload
+        virtual ~Cat(void);                   //canonical destructor
         
         void    makeSound(void) const;
         // const = read-only that doens't modify the object for whih it's called
