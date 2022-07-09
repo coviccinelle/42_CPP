@@ -6,13 +6,13 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:12:43 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/09 16:21:54 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/09 16:26:10 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
-
+// #ifndef ANIMAL_HPP
+// # define ANIMAL_HPP
+#pragma once
 # include <iostream>
 
 class Animal
@@ -38,4 +38,4 @@ class Animal
 		std::string	_type;
 };
 
-#endif
+// #endif
