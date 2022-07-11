@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:13:43 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/11 15:57:12 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/11 15:58:21 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ Cat::~Cat(void)                   //canonical destructor
     return ;
 }
 
+
+//***** FUNCTION ****** //
 void    Cat::makeSound(void) const
 {
     std::cout << this->_type << "'s sound is Meooow! Meooow! Meooow!" << std::endl;
