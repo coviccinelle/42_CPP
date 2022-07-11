@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:13:10 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/11 15:03:47 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/11 15:52:33 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 #include "Dog.hpp"
 
-Dog::Dog(void)                        //canonical default constructor
+Dog::Dog(void) : Animal("Dog")                        //canonical default constructor
 {
     std::cout << "[Dog]: Default constructor called" << std::endl;
     return ;
 }
-
 
 Dog::Dog(Dog const & fx)              //canonical copy constructor
 {
@@ -28,10 +27,11 @@ Dog::Dog(Dog const & fx)              //canonical copy constructor
     return ;
 }
 
-Dog::Dog & operator= (const Dog & fx) //canonical copy assignment operator overload
+Dog & Dog::operator=(const Dog & fx) //canonical copy assignment operator overload
 {
     std::cout << "[Dog]: Copy assignment operator overload" << std::endl;
     this->_type = fx.getType();
+    //this->setType(fx.getType());
     return (*this);
 }
 
@@ -41,8 +41,7 @@ Dog::~Dog(void)                   //canonical destructor
     return ;
 }
 
-
-void    makeSound(void) const
+void    Dog::makeSound(void) const
 {
-    
+    std::cout << this->_type << "'s sound is Woof! Woof! Woof!" << std::endl;
 }
