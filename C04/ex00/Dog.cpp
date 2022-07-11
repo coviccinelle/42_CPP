@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:13:10 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/11 15:02:21 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/11 15:03:47 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,7 @@ Dog::~Dog(void)                   //canonical destructor
 }
 
 
-void    makeSound(void) const;
+void    makeSound(void) const
+{
+    
+}

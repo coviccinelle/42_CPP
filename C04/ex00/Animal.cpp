@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:12:57 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/09 19:50:33 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/11 15:06:16 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@
     return ;
 }
 
-
 //Function
-
 Animal & Animal::operator= ( const Animal & fx)
 {
     std::cout << "[Animal]: Canonical copy assignement operator overload" << std::endl;
@@ -51,23 +49,22 @@ Animal::~Animal(void)	//canonical default destructor (virtual avoid memory leaks
         
 std::string	    Animal::getType(void)const
 {
-    //std::cout << "[Animal]: Get Type function called" << std::endl;
+    std::cout << "[Animal]: Get Type function called" << std::endl;
     return (this->_type) ;
 }
 
         
 void    Animal::setType(std::string type)
 {
-    //std::cout << "[Animal]: Set Type function called" << std::endl;
+    std::cout << "[Animal]: Set Type function called" << std::endl;
     this->_type = type;
     return ;
 }
 
-        
 //A [virtual] function is a member function which
 //is declared within a base class and is re-defined (overridden) by a derived class
 void	Animal::makeSound(void)const
 {
-    std::cout << "[Animal]: Someone os going to make a noiceeeee" << std::endl;
+    std::cout << "[Animal]: " << this->_type << "'s sound is unknow" << std::endl;
     return ;
 }
