@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/11 15:54:09 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/11 15:55:16 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	main()
 {
     const Animal* meta = new Animal();
     const Animal* j = new Dog();
-    //const Animal* i = new Cat();
+    const Animal* i = new Cat();
     std::cout << j->getType() << " " << std::endl;
-    //std::cout << i->getType() << " " << std::endl;
-    //i->makeSound(); //will output the cat sound!
+    std::cout << i->getType() << " " << std::endl;
+    i->makeSound(); //will output the cat sound!
     j->makeSound();
     meta->makeSound();
     //...
