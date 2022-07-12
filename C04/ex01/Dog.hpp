@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:13:22 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/12 14:32:07 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/12 14:39:42 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Dog : public Animal
         
         void    makeSound(void) const;
         // const = read-only that doens't modify the object for whih it's called
+        Brain   *getBrain(void)const;
     
     protected:
     private:

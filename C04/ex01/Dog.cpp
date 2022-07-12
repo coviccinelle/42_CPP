@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:13:10 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/12 14:36:00 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/12 14:39:11 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Dog::Dog(void) : Animal("Dog")                        //canonical default constr
 Dog::Dog(Dog const & fx)              //canonical copy constructor
 {
     std::cout << "[Dog]: Copy constructor called" << std::endl;
-    this->_type = fx.setType();
+    this->_type = fx.getType();
     this->id = new Brain(*fx.id);
     return ;
 }
@@ -51,7 +51,7 @@ void    Dog::makeSound(void) const
     std::cout << this->_type << "'s sound is Woof! Woof! Woof!" << std::endl;
 }
 
-// Brain   *Dog::getBrain(void)const
-// {
-//     return (this->id);
-// }
+Brain   *Dog::getBrain(void)const
+{
+    return (this->id);
+}

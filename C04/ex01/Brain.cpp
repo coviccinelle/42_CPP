@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:06:10 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/12 14:20:12 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/12 14:40:18 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Brain::Brain(Brain const & fx)
     return ;
 }
 
-Brain && Brain::operator=(const Brain & fx)
+Brain & Brain::operator=(const Brain & fx)
 {
     std::cout << "[Brain]: canonical Copy assignment operator overload called" << std::endl;
     int i = 0;
