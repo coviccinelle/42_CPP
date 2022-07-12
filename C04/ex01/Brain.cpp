@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:06:10 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/12 14:15:04 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/12 14:20:12 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 Brain::Brain(void)
 {
     std::cout << "[Brain]: Canonical Default constructor called" << std::endl;
+    int i = 0;
+    while (i < 100)
+    {
+        this->ideas[i] = "Ideas hihi";
+        i++;
+    }
     return ;
 }
 
@@ -25,7 +31,8 @@ Brain::Brain(Brain const & fx)
 
     while (i < 100)
     {
-        
+        this->ideas[i] = fx.ideas[i];
+        i++;
     }
     return ;
 }
@@ -40,6 +47,7 @@ Brain && Brain::operator=(const Brain & fx)
         // [i <= 100 OR i < 100] ???
         this->ideas[i] = fx.ideas[i];
     }
+    return (*this);
 }
 
 Brain::~Brain(void)
@@ -48,4 +56,4 @@ Brain::~Brain(void)
     return ;   
 }
 
-std::string     _ideas[100];
+// std::string     _ideas[100];
