@@ -6,11 +6,11 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/11 14:50:49 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/12 12:17:39 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Polymorphism
+NAME	=	I_dont_want_to_set_the_world_on_fire
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
@@ -19,7 +19,8 @@ SRC		=	Animal.cpp \
 			Cat.cpp \
 			main.cpp \
 			WrongCat.cpp \
-			WrongAnimal.cpp
+			WrongAnimal.cpp \
+			Brain.cpp
 
 OBJDIR	=	objs
 OBJ		=	$(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
