@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:43:50 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/09 16:27:55 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/12 11:48:36 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class WrongAnimal
 		std::string		getType(void)const;
 		void			setType(std::string type);
 		void        	makeSound(void)const;
-		//A [virtual] function is a member function which is declared within 
-		//a base class and is re-defined (overridden) by a derived class
+		//Makesound is not virtual so it will heritage from Animal
+		//Et du coup il utilise le make sound de la classe animal et pas celle de la classe WrongCat
 		
 		//Destructor
 		virtual ~WrongAnimal(void);	//canonical default destructor (virtual avoid memory leaks in case of inheritance)

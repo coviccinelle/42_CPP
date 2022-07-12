@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/12 11:07:23 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/12 11:55:06 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main()
     
     //...
 
-    std::cout << std::endl << "Here we go the wrong Cat and Wrong animal" << std::endl << std::endl;
+    std::cout << std::endl << "Here we go the [Wrong Cat] and [Wrong Animal]" << std::endl << std::endl;
     const WrongAnimal       *beta = new WrongAnimal();
     const WrongAnimal       *k = new WrongCat();
 
@@ -43,5 +43,13 @@ int	main()
     k->makeSound(); //will output the cat sound!
     
     beta->makeSound();
+
+    std::cout << std::endl << "Destructor section!!!" << std::endl << std::endl;
+    delete meta;
+    delete j;
+    delete i;
+    delete beta;
+    delete k;
+
     return 0;
 }
