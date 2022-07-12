@@ -6,13 +6,14 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:13:22 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/09 18:46:44 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/12 14:32:07 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal
 {
@@ -27,4 +28,5 @@ class Dog : public Animal
     
     protected:
     private:
+        Brain   *id;
 };
