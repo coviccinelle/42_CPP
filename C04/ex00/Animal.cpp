@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:12:57 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/11 15:06:16 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/12 11:09:18 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 /*void    */Animal::Animal(std::string type) : _type(type)
 {
-    std::cout << "[Animal]: Str constructor called" << std::endl;
+    //std::cout << "[Animal]: Str constructor called" << std::endl;
     return ;
 }
 
