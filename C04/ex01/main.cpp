@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/12 12:16:42 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/12 12:20:55 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "Dog.hpp"
 #include "WrongCat.hpp"
 #include "WrongAnimal.hpp"
+#include "Brain.hpp"
 
 int	main()
 {
