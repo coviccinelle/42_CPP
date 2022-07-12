@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:06:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/12 12:53:26 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/12 14:06:37 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ class Brain
         virtual ~Brain(void);
     
     private:
-        std::string     _ideas[100];
+        std::string     ideas[100];
 };
