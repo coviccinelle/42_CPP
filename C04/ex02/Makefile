@@ -6,7 +6,7 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/08 11:32:56 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/13 13:12:14 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,10 @@ RM		=	rm -rf
 SRC		=	Animal.cpp \
 			Dog.cpp \
 			Cat.cpp \
-			main.cpp
+			main.cpp \
+			WrongCat.cpp \
+			WrongAnimal.cpp \
+			Brain.cpp
 
 OBJDIR	=	objs
 OBJ		=	$(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
