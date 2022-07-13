@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:12:57 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/13 13:39:10 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/13 13:55:13 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Animal & Animal::operator= ( const Animal & fx)
 //Destructor
 Animal::~Animal(void)	//canonical default destructor (virtual avoid memory leaks in case of inheritance)
 {
-    std::cout << "[Animal 🐒]:      Destructor called" << std::endl;
+    std::cout << "[Animal 🐒]:     Destructor called" << std::endl;
     return ;
 }
         
