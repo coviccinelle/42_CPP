@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/13 13:26:38 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/13 13:51:08 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main()
     const WrongAnimal       *beta = new WrongAnimal();
     const WrongAnimal       *k = new WrongCat();
 
-    std::cout << k->getType() << " " << std::endl;
+    std::cout << k->getType() << " ------> 💣 😿" << std::endl;
     
     k->makeSound(); //will output the cat sound!
     
