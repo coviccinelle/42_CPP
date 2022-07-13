@@ -15,19 +15,19 @@
 
 /*void    */WrongAnimal::WrongAnimal(void) : _type("WrongAnimal")									//canonical default constructeur
 {
-    std::cout << "[WrongAnimal 🐒]: Default constructor called" << std::endl;
+    std::cout << "[WrongAnimal 💣🐒 ]: Default constructor called" << std::endl;
     return ;
 }
 
 /*void    */WrongAnimal::WrongAnimal(std::string type) : _type(type)
 {
-    std::cout << "[WrongAnimal 🐒]: Str constructor called" << std::endl;
+    std::cout << "[WrongAnimal 💣🐒 ]: Str constructor called" << std::endl;
     return ;
 }
 
 /*void    */WrongAnimal::WrongAnimal(WrongAnimal const & fx)						//canonical copy constructor
 {
-    std::cout << "[WrongAnimal 🐒]: Canonical Copy constructor called" << std::endl;
+    std::cout << "[WrongAnimal 💣🐒 ]: Canonical Copy constructor called" << std::endl;
     *this = fx;
     return ;
 }
@@ -35,7 +35,7 @@
 //Function
 WrongAnimal & WrongAnimal::operator= ( const WrongAnimal & fx)
 {
-    std::cout << "[WrongAnimal 🐒]: Canonical copy assignement operator overload" << std::endl;
+    std::cout << "[WrongAnimal 💣🐒 ]: Canonical copy assignement operator overload" << std::endl;
     this->_type = fx.getType();
     return (*this);
 }
@@ -43,20 +43,20 @@ WrongAnimal & WrongAnimal::operator= ( const WrongAnimal & fx)
 //Destructor
 WrongAnimal::~WrongAnimal(void)	//canonical default destructor (virtual avoid memory leaks in case of inheritance)
 {
-    std::cout << "[WrongAnimal 🐒]: Destructor called" << std::endl;
+    std::cout << "[WrongAnimal 💣🐒 ]:  Destructor called" << std::endl;
     return ;
 }
         
 std::string	    WrongAnimal::getType(void)const
 {
-    std::cout << "[WrongAnimal 🐒]: Get Type function called" << std::endl;
+    std::cout << "[WrongAnimal 💣🐒 ]: Get Type function called" << std::endl;
     return (this->_type) ;
 }
 
         
 void    WrongAnimal::setType(std::string type)
 {
-    std::cout << "[WrongAnimal 🐒]: Set Type function called" << std::endl;
+    std::cout << "[WrongAnimal 💣🐒 ]: Set Type function called" << std::endl;
     this->_type = type;
     return ;
 }
@@ -65,6 +65,6 @@ void    WrongAnimal::setType(std::string type)
 //is declared within a base class and is re-defined (overridden) by a derived class
 void	WrongAnimal::makeSound(void)const
 {
-    std::cout << "[WrongAnimal 🐒]: " << this->_type << "'s sound is unknow" << std::endl;
+    std::cout << "[WrongAnimal 💣🐒 ]: " << this->_type << "'s sound is unknow" << std::endl;
     return ;
 }

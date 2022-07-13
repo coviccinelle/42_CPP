@@ -16,20 +16,20 @@
 
 WrongCat::WrongCat(void) : WrongAnimal("WrongCat")                        //canonical default constructor
 {
-    std::cout << "[WrongCat]: Default constructor called" << std::endl;
+    std::cout << "[WrongCat 💣 😿]:       Default constructor called" << std::endl;
     return ;
 }
 
 WrongCat::WrongCat(WrongCat const & fx)              //canonical copy constructor
 {
-    std::cout << "[WrongCat]: Copy constructor called" << std::endl;
+    std::cout << "[WrongCat 💣 😿]: Copy constructor called" << std::endl;
     *this = fx;
     return ;
 }
 
 WrongCat & WrongCat::operator=(const WrongCat & fx) //canonical copy assignment operator overload
 {
-    std::cout << "[WrongCat]: Copy assignment operator overload" << std::endl;
+    std::cout << "[WrongCat 💣 😿]: Copy assignment operator overload" << std::endl;
     this->_type = fx.getType();
     //this->setType(fx.getType());
     return (*this);
@@ -37,7 +37,7 @@ WrongCat & WrongCat::operator=(const WrongCat & fx) //canonical copy assignment 
 
 WrongCat::~WrongCat(void)                   //canonical destructor
 {
-    std::cout << "[WrongCat]: Destructor called" << std::endl;
+    std::cout << "[WrongCat 💣 😿]: Destructor called" << std::endl;
     return ;
 }
 
