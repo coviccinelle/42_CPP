@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/12 14:37:21 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/13 11:11:47 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ int	main()
     // delete i;
     // //...
     // return 0;
-    	int		size = 4;
+    
+	
+	int		size = 5;
 	Animal	*tab[size];
 	int		i;
 
@@ -63,9 +65,9 @@ int	main()
 
 		std::cout << std::endl;
 
-		std::cout << "l'adresse du Dog a = " << a.getBrain() << std::endl;
-		std::cout << "l'adresse du Dog b = " << b.getBrain() << std::endl;
-		std::cout << "l'adresse du Dog c = " << c.getBrain() << std::endl;
+		std::cout << "l'adress of the Dog a = " << a.getBrain() << std::endl;
+		std::cout << "l'adress of the Dog b = " << b.getBrain() << std::endl;
+		std::cout << "l'adress of the Dog c = " << c.getBrain() << std::endl;
 
 		std::cout << std::endl;
 	}
