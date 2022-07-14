@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 18:12:00 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/13 13:25:29 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/14 15:50:58 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@
 int	main()
 {
 	// Animal animal; pour montrer qu'on peut pas l'instancier
+#ifdef DEBUG
+	const Animal* meta = new Animal();
+#endif
 
-	//const Animal* meta = new Animal();
     const Animal* j = new Dog();
     const Animal* i = new Cat();
     

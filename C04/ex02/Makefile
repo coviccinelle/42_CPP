@@ -6,13 +6,18 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/13 13:12:14 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/14 15:51:47 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	Abstract_class
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+
+ifeq ($(DEBUG), 1)
+	CFLAGS		+= -DDEBUG
+endif
+
 RM		=	rm -rf
 SRC		=	Animal.cpp \
 			Dog.cpp \
@@ -82,6 +87,9 @@ clean:
 fclean:			clean
 	$(RM) $(NAME) ${RM} objs
 
+debug		:	fclean
+				$(MAKE) DEBUG=1
+
 re:				fclean all
 
-.PHONY:			all clean fclean re launch
+.PHONY:			all clean fclean re launch debug
