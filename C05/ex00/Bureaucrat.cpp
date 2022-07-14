@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:21 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/14 18:05:04 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/14 19:03:36 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,6 @@ Bureaucrat::~Bureaucrat(void)
 
 std::ostream & operator << (std::ostream & sortie, const Bureaucrat & fx)
 {
-    sortie << "grade is at " << fx.getGrade() << std::endl;
+    sortie << "[Grade] == " << fx.getGrade() << std::endl;
     return (sortie);
 }

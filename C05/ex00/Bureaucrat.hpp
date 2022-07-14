@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:33 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/14 17:59:25 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/14 18:58:29 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ class Bureaucrat
         {
             virtual const char * what() const throw()
 		    {
-			    return ("Invalid!! Grade is too low");
+			    return ("🚨 Error: 💣 Invalid!! Grade is too low ⬇️");
 		    }
         };
         class   GradeTooHighException : public std::exception
         {
             virtual const char * what() const throw()
 		    {
-			    return ("Invalid!! Grade is too high");
+			    return ("🚨 Error: 💣 Invalid!! Grade is too high ");
 		    }
         };
         ~Bureaucrat(void);                              //destructor
