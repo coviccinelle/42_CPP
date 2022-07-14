@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:21 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/14 17:55:12 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/14 18:05:04 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,29 +50,47 @@ void    Bureaucrat::setGrade(unsigned int grade)
 {
     try
     {
-        if (grade > 150)
-            throw std::exception();
         if (grade <= 0)
-            throw std::exception();
-        this->_Grade = grade;
-    }
-    catch(const std::exception& e)
-    {
+        {
+            throw Bureaucrat::GradeTooHighException();
+        }
         if (grade > 150)
-            this->GradeTooLowException();
-        else
-            this->GradeTooHighException();
+             throw Bureaucrat::GradeTooLowException();
+            this->_Grade = grade;
+    }
+    catch(std::exception & e)
+    {
+        std::cerr << e.what() << std::endl;
     }
 }
 
 void    Bureaucrat::increment(void)
 {
-    this->_Grade--;
+    try
+    {
+        if (this->_Grade - 1 == 0)
+            throw Bureaucrat::GradeTooHighException();
+        this->_Grade--;   
+    }
+    catch (std::exception & e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
 }
 
 void    Bureaucrat::decrement(void)
 {
-    this->_Grade++;
+    try
+    {
+        if (this->_Grade + 1 == 151)
+            throw Bureaucrat::GradeTooLowException();
+
+        this->_Grade++;   
+    }
+    catch (std::exception & e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
 }
 
 Bureaucrat::~Bureaucrat(void)
@@ -84,14 +102,4 @@ std::ostream & operator << (std::ostream & sortie, const Bureaucrat & fx)
 {
     sortie << "grade is at " << fx.getGrade() << std::endl;
     return (sortie);
-}
-
-void    Bureaucrat::GradeTooLowException(void)
-{
-    std::cout << "Error, grade too low!!" << std::endl;
-}
-
-void    Bureaucrat::GradeTooHighException(void)
-{
-    std::cout << "Error, grade too high!!" << std::endl;
 }
