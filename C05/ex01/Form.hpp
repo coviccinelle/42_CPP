@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:37:19 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/15 11:01:05 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/15 11:55:07 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ class Form
         void        setSign(bool sign);
 
             // *** EXCEPTION *** //
-        class FormNotSignedException: public std::exception
-        {
-            virtual const char * what() const throw()
-                return ("[Status]:🚨💣 This form is not signed yet ! Please go sign it");
-        };
+        // class FormNotSignedException: public std::exception
+        // {
+        //     virtual const char * what() const throw()
+        //         return ("[Status]:🚨💣 This form is not signed yet ! Please go sign it");
+        // };
 
         class FormAlreadySignedException: public std::exception
         {
