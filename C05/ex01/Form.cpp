@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:37:01 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/15 11:33:21 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/15 11:43:18 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ Form & Form::operator=(const Form & fx) //overload
 
 void    Form::beSigned(Bureaucrat bur)
 {
-    
+    std::cout << "[Form]: BeSigned fucntion called" << std::endl;
+    if 
 }
 
     // *** Get functions *** //
