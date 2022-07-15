@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:37:01 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/15 11:31:56 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/15 11:33:21 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int         Form::getExecGrade(void)const
     // *** Set function *** //
 void        Form::setSign(bool sign)
 {
-    
+    this->_Signed = sign;
 }
 
 std::ostream & operator << (std::ostream & sortie, const Form & fx)
