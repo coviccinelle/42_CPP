@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:33 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/15 10:23:50 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/15 12:02:15 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@ class Bureaucrat
 			    return ("🚨 Error: 💣 Invalid!! Grade is too high ");
 		    }
         };
+        void    signForm(Form & fx);
+
+        
         ~Bureaucrat(void);                              //destructor
         
     protected:

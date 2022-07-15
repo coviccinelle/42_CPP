@@ -6,50 +6,54 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:18:28 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/14 19:35:59 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/15 11:58:47 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
-    Bureaucrat bur;
-    
-    // std::cout << std::endl << "----------------- [Grade should be 1] -----" << std::endl;
-    // std::cout << bur;
-    
-    // std::cout << std::endl << "---------------- [Set grade at 130] -----" << std::endl;
-    // bur.setGrade(130);
-    // std::cout << bur;
-    
-    // std::cout << std::endl << "---------------- [Set grade at 150] -----" << std::endl;
-    // bur.setGrade(150);
-    // std::cout << bur;
-    
-    // std::cout << std::endl << "---------------- [Increment ---> 149] ---" << std::endl;
-    // bur.increment();
-    // std::cout << bur;
-    
-    // std::cout << std::endl << "---------------- [Set grade at 150] -----" << std::endl;
-    // bur.setGrade(150);
-    // std::cout << bur;
+	Bureaucrat	bur("Martin", 20);
+	Form		form;
 
-    // std::cout << std::endl << "---------------- [Decrement] ---> too low " << std::endl;
-    // bur.decrement();
-    // std::cout << bur;
+	std::cout << "-----HIGH-----" << std::endl;
+	std::cout << bur;
+	bur.increment();	
+	std::cout << bur;
+	bur.increment();
+	std::cout << bur << std::endl;
+	std::cout << "-----LOW-----" << std::endl;
+	bur.decrement();
+	std::cout << bur;
+	bur.decrement();
+	std::cout << bur << std::endl;
 
-    // std::cout << std::endl << "---------------- [Set grade at 1] -----" << std::endl;
-    // bur.setGrade(1);
-    // std::cout << bur;
+	std::cout << "-------Be sign-------" << std::endl;
+	try{	
+		form.beSigned(bur);
+	}
+	catch (std::exception & e){
+		std::cout << std::endl;
+		std::cout << bur.getName() << " cannot sign because " << e.what() << std::endl;
+	}
+	std::cout << form << std::endl;
 
-    // std::cout << std::endl << "---------------- [Increment] ---> too high ---" << std::endl;
-    // bur.increment();
-    // std::cout << bur;
-    
-    // std::cout << std::endl << "------------ [Set grade at 0] ---> too high" << std::endl;
-    // bur.setGrade(0);
-    // std::cout << bur << std::endl;
+
+	std::cout << "-------Be sign2-------" << std::endl;
+	try{
+		form.beSigned(bur);
+	}
+	catch (std::exception & e){
+		std::cout << bur.getName() << " cannot sign because " << e.what() << std::endl;
+	}
+	std::cout << form << std::endl;
+
+	std::cout << "-------sign form-------" << std::endl;
+		bur.signForm(form);
+	std::cout << bur << std::endl;
+	return (0);
     
     return (0);   
 }

@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:21 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/14 19:03:36 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/15 12:09:12 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,24 @@ void    Bureaucrat::decrement(void)
         std::cerr << e.what() << std::endl;
     }
 }
+
+void    Bureaucrat::signForm(Form & fx)
+{
+    std::cout << "[Bureaucrat]: Sign Form function called " << std::endl;
+    try
+    {
+        fx.beSigned(*this);
+    }
+    catch(const std::exception & e)
+    {
+        // if it fall into the gradetoolow or already signed -> catch inn this case
+        // more detail in Form cpp
+        std::cerr << this->_Name << "can't be signed because " < e.what() << '\n';
+        return ;
+    }
+    std::cout << this->_Name << " signes " << fx.getNameForm() << std::endl;
+}
+
 
 Bureaucrat::~Bureaucrat(void)
 {
