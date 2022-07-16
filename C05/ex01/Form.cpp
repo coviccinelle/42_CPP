@@ -6,13 +6,13 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:37:01 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/15 11:56:09 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 11:01:50 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(void)                  //default
+Form::Form(void) : _Name("Default"), _Signed(false), _signGrade(20), _ExecGrade(10)
 {
     std::cout << "[Form]: Constructor called" << std::endl;
 }
@@ -22,7 +22,7 @@ Form::Form(std::string name, int SignGrade, int ExecGrade) : _Name(name), _signG
     std::cout << "[Form]: Param constructor called" << std::endl;
 }
 
-Form::Form(const Form & fx)       //copy
+Form::Form(const Form & fx) : _signGrade(20), _ExecGrade(10)
 {
     std::cout << "[Form]: Constructor copy called" << std::endl;
     *this = fx;
@@ -36,7 +36,7 @@ Form::~Form(void)         //destructor
     // *** Fucnction *** //
 Form & Form::operator=(const Form & fx) //overload
 {
-    std::cout << "[Form]: Constructor copy assignment operator overload called" << std::ednl;
+    std::cout << "[Form]: Constructor copy assignment operator overload called" << std::endl;
     this->_Name = fx.getNameForm();
     this->_Signed = fx.getSign();
     this->_signGrade = fx.getSignGrade();

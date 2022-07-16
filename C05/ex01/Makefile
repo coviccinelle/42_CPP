@@ -6,7 +6,7 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/14 19:35:00 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/16 10:57:49 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
 SRC		=	Bureaucrat.cpp \
+			Form.cpp \
 			main.cpp 
 
 OBJDIR	=	objs
