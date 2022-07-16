@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:21 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/15 12:09:12 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 10:55:31 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void    Bureaucrat::signForm(Form & fx)
     {
         // if it fall into the gradetoolow or already signed -> catch inn this case
         // more detail in Form cpp
-        std::cerr << this->_Name << "can't be signed because " < e.what() << '\n';
+        std::cerr << this->_Name << "can't be signed because " << e.what() << '\n';
         return ;
     }
     std::cout << this->_Name << " signes " << fx.getNameForm() << std::endl;
