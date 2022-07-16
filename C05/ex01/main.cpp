@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:18:28 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 11:24:07 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 11:29:10 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ int main()
 	bur.decrement();
 	std::cout << bur;
 	bur.decrement();
+	std::cout << bur << std::endl;
+
+
+
+	std::cout << "------- [VERY FIRST Sign form] -------" << std::endl;
+	bur.signForm(form);
 	std::cout << bur << std::endl;
 
 	std::cout << "------- [Be signed]-------" << std::endl;
