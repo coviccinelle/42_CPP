@@ -6,12 +6,11 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:37:19 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 18:14:53 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 19:53:41 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
 #include <iostream>
 #include "Bureaucrat.hpp"
 
@@ -26,8 +25,10 @@ class Form
         virtual ~Form(void);         //destructor
 
             // *** Fucnction *** //
-        Form & operator=(const Form & fx); //overload
-        void    beSigned(Bureaucrat bur);
+        Form            & operator=(const Form & fx); //overload
+        void            beSigned(Bureaucrat bur);
+        virtual void    execute(Bureaucrat const & exec) const = 0;
+        void            checker_exec(Bureaucrat cosnt & bur) const;
         
             // *** Get functions *** //
         std::string getNameForm(void)const;
