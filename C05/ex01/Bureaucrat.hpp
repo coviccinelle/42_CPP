@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:33 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 10:56:10 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 11:25:11 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Bureaucrat
         void            increment(void);
         void            decrement(void);
 
-        void            signForm(void);
+        void    signForm(Form & fx);
         
         class   GradeTooLowException : public std::exception
         {
@@ -51,7 +51,6 @@ class Bureaucrat
 			    return ("🚨 Error: 💣 Invalid!! Grade is too high ");
 		    }
         };
-        void    signForm(Form & fx);
 
         
         ~Bureaucrat(void);                              //destructor

@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:18:28 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/15 11:58:47 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 11:24:07 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,30 +30,34 @@ int main()
 	bur.decrement();
 	std::cout << bur << std::endl;
 
-	std::cout << "-------Be sign-------" << std::endl;
-	try{	
+	std::cout << "------- [Be signed]-------" << std::endl;
+	try
+	{	
 		form.beSigned(bur);
 	}
-	catch (std::exception & e){
+	catch (std::exception & e)
+	{
 		std::cout << std::endl;
-		std::cout << bur.getName() << " cannot sign because " << e.what() << std::endl;
+		std::cout << bur.getName() << " cannot sign because " << e.what() << std::endl << std::endl;
 	}
 	std::cout << form << std::endl;
 
 
-	std::cout << "-------Be sign2-------" << std::endl;
-	try{
+	std::cout << "------- [Be signed 2] -------" << std::endl;
+	try
+	{
 		form.beSigned(bur);
 	}
-	catch (std::exception & e){
+	catch (std::exception & e)
+	{
 		std::cout << bur.getName() << " cannot sign because " << e.what() << std::endl;
 	}
 	std::cout << form << std::endl;
 
-	std::cout << "-------sign form-------" << std::endl;
+
+	std::cout << "------- [Sign form] -------" << std::endl;
 		bur.signForm(form);
 	std::cout << bur << std::endl;
 	return (0);
     
-    return (0);   
 }
