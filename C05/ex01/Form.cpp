@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:37:01 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 11:01:50 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 11:04:28 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,19 +37,19 @@ Form::~Form(void)         //destructor
 Form & Form::operator=(const Form & fx) //overload
 {
     std::cout << "[Form]: Constructor copy assignment operator overload called" << std::endl;
-    this->_Name = fx.getNameForm();
+    // this->_Name = fx.getNameForm();
     this->_Signed = fx.getSign();
-    this->_signGrade = fx.getSignGrade();
-    this->_ExecGrade = fx.getExecGrade();
+    // this->_signGrade = fx.getSignGrade();
+    // this->_ExecGrade = fx.getExecGrade();
     return (*this);
 }
 
 void    Form::beSigned(Bureaucrat bur)
 {
     std::cout << "[Form]: BeSigned fucntion called" << std::endl;
-    if (bur.getGrade() > this->_signGrade)
+    if (bur.getGrade() > (unsigned int)this->_signGrade)
         throw Bureaucrat::GradeTooLowException();
-    else if (bur.getGrade() < this->_signGrade)
+    else if (bur.getGrade() < (unsigned int) this->_signGrade)
         throw Bureaucrat::GradeTooHighException();
     else if (this->_Signed == true)
         throw Form::FormAlreadySignedException();
