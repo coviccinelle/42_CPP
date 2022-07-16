@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:37:01 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 11:30:52 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 18:14:22 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,11 @@ void    Form::beSigned(Bureaucrat bur)
     std::cout << "[Form]: BeSigned fucntion called" << std::endl;
     if (bur.getGrade() > (unsigned int)this->_signGrade)
         throw Bureaucrat::GradeTooLowException();
-    else if (bur.getGrade() < (unsigned int) this->_signGrade)
-        throw Bureaucrat::GradeTooHighException();
     else if (this->_Signed == true)
         throw Form::FormAlreadySignedException();
     else
         this->_Signed = true;
-    std::cout << "[Form]: ✅👌 This form is already signed ! You good to go. From beSigned" << std::endl;
+    std::cout << "[Form]: ✅👌 This form is already signed ! You good to go (😘 From beSigned)" << std::endl;
 }
 
     // *** Get functions *** //

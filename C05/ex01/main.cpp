@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:18:28 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 11:29:10 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 18:08:52 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ int main()
 
 
 
-	std::cout << "------- [VERY FIRST Sign form] -------" << std::endl;
+	std::cout << "------- [VERY FIRST Sign form from Bureaucrat] -------" << std::endl;
 	bur.signForm(form);
 	std::cout << bur << std::endl;
 
-	std::cout << "------- [Be signed]-------" << std::endl;
+	std::cout << "------- [Be signed from Form]-------" << std::endl;
 	try
 	{	
 		form.beSigned(bur);
@@ -49,7 +49,7 @@ int main()
 	std::cout << form << std::endl;
 
 
-	std::cout << "------- [Be signed 2] -------" << std::endl;
+	std::cout << "------- [Be signed 2 from Form] -------" << std::endl;
 	try
 	{
 		form.beSigned(bur);
@@ -62,7 +62,7 @@ int main()
 
 
 	std::cout << "------- [Sign form] -------" << std::endl;
-		bur.signForm(form);
+	bur.signForm(form);
 	std::cout << bur << std::endl;
 	return (0);
     

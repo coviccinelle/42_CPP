@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:21 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 11:33:56 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 18:07:47 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ void    Bureaucrat::signForm(Form & fx)
         std::cerr << this->_Name << "can't be signed because " << e.what() << '\n';
         return ;
     }
-    std::cout << "======  🎆 👏 [SIGN FORM] ✅ 👌 🎉 ====== " << this->_Name << " signes " << fx.getNameForm() << std::endl;
+    std::cout << "======  🎆 👏 [SIGN FORM] ✅ 👌 🎉 ====== " << this->_Name << " signed " << fx.getNameForm() << std::endl;
 }
 
 
