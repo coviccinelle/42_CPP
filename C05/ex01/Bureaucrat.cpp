@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:21 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 18:18:01 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 18:52:33 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void    Bureaucrat::increment(void)
 {
     try
     {
-        if (this->_Grade - 1 == 0)
+        if (this->_Grade - 1 <= 0)
             throw Bureaucrat::GradeTooHighException();
         this->_Grade--;   
     }
@@ -82,9 +82,8 @@ void    Bureaucrat::decrement(void)
 {
     try
     {
-        if (this->_Grade + 1 == 151)
+        if (this->_Grade + 1 >= 151)
             throw Bureaucrat::GradeTooLowException();
-
         this->_Grade++;   
     }
     catch (std::exception & e)

@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:18:28 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 18:21:10 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 18:55:11 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int main()
 	std::cout << bur << std::endl;
 #endif
 
+	std::cout << form << std::endl;
 	std::cout << "------- [VERY FIRST Sign form from Bureaucrat] -------" << std::endl;
 	bur.signForm(form);
 	std::cout << bur << std::endl;
