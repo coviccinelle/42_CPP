@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:18:28 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 18:08:52 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/16 18:21:10 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,11 @@ int main()
 	std::cout << bur;
 	bur.decrement();
 	std::cout << bur << std::endl;
-
-
+	
+#ifdef DEBUG
+	bur.decrement();
+	std::cout << bur << std::endl;
+#endif
 
 	std::cout << "------- [VERY FIRST Sign form from Bureaucrat] -------" << std::endl;
 	bur.signForm(form);
@@ -44,7 +47,7 @@ int main()
 	catch (std::exception & e)
 	{
 		std::cout << std::endl;
-		std::cout << bur.getName() << " cannot sign because " << e.what() << std::endl << std::endl;
+		std::cout << bur.getName() << " can't sign because " << e.what() << std::endl << std::endl;
 	}
 	std::cout << form << std::endl;
 
@@ -56,7 +59,7 @@ int main()
 	}
 	catch (std::exception & e)
 	{
-		std::cout << bur.getName() << " cannot sign because " << e.what() << std::endl;
+		std::cout << bur.getName() << " can't sign because " << e.what() << std::endl;
 	}
 	std::cout << form << std::endl;
 
