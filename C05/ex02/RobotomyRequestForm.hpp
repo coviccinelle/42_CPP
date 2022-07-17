@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:00:43 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 22:07:42 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/17 13:43:43 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class RobotomyRequestForm : public Form
     public:
         RobotomyRequestForm(void); //default
         RobotomyRequestForm(std::string target);
-        RobotomyRequestForm(std::string name, unsigned int grade);
+        //RobotomyRequestForm(std::string name, unsigned int grade);
         RobotomyRequestForm(RobotomyRequestForm const & fx); //copie
         
         RobotomyRequestForm &operator=(const RobotomyRequestForm & fx); // overload

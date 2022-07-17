@@ -6,14 +6,14 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:00:27 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/17 13:40:29 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/17 13:49:52 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
 			///////////////////////////////////
-			///	    *** Canonical	*** 	///
+			///	    *** Canonical	*** 	    ///
 			///////////////////////////////////
 
 ShrubberyCreationForm::ShrubberyCreationForm(void) : Form("ShrubberyForm", 145, 137)
