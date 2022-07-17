@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:01:13 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/17 11:25:15 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/17 18:52:07 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class PresidentialPardonForm : public Form
         PresidentialPardonForm &operator=(const PresidentialPardonForm & fx);
         void                    execute(Bureaucrat const & executor) const;
         
-        std::tring              getTarget(void)const;
+        std::string              getTarget(void)const;
         
         ~PresidentialPardonForm(void);   
 

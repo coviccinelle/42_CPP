@@ -6,13 +6,16 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:01:23 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/17 11:07:50 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/17 18:51:43 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-
+			///////////////////////////////////
+			///	    *** Canonical	*** 	///
+			///////////////////////////////////
+            
 PresidentialPardonForm::PresidentialPardonForm(void) : Form("PresidenForm", 25, 5)
 {
     std::cout << "[PresidentialPardonForm] : Default constructor called" << std::endl;
@@ -24,13 +27,45 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("Presi
     std::cout << "[PresidentialPardonForm]: Str target constructor called" << std::endl;
 }
 
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & fx) : Form(fx)
+{
+    std::cout << "[PresidentialPardonForm]: Copy constructor called" << std::endl;
+    this->_Target = fx.getTarget();
+}
 
-        PresidentialPardonForm(std::string name, unsigned int grade);
-        PresidentialPardonForm(PresidentialPardonForm const & fx); // copie
-        
-        PresidentialPardonForm &operator=(const PresidentialPardonForm & fx);
-        void                    execute(Bureaucrat const & executor) const;
-        
-        std::tring              getTarget(void)const;
-        
-        ~PresidentialPardonForm(void);   
+PresidentialPardonForm & PresidentialPardonForm::operator=(const PresidentialPardonForm & fx)
+{
+    std::cout << "[PresidentialPardonForm]: Copy constructor called" << std::endl;
+    this->_Target = fx.getTarget();
+    return (*this);
+}
+
+PresidentialPardonForm::~PresidentialPardonForm(void)
+{
+    std::cout << "[PresidentialPardonForm]: Destructor called" << std::endl;
+}
+
+			///////////////////////////////////
+			///	    *** Functions	*** 	///
+			///////////////////////////////////
+
+
+std::string  PresidentialPardonForm::getTarget(void)const
+{
+    return (this->_Target);
+}
+
+
+void    PresidentialPardonForm::execute(Bureaucrat const & executor) const
+{
+    try
+    {
+        this->checker_exec(executor);
+    }
+    catch(const std::exception & e)
+    {
+        std::cerr << "[President]: 🚧 🚸 We couldn’t sign because " << e.what() << '\n';
+    }
+    std::cout << " was forgiven by Zaphod Beeblebrox." << std::endl;
+    std::cout << "This form was executed successfuly!  ✅ 👌 🎉" << std::endl << std::endl;
+}

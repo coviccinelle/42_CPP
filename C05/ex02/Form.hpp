@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:37:19 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 20:01:13 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/17 18:51:20 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Form
         Form            & operator=(const Form & fx); //overload
         void            beSigned(Bureaucrat bur);
         virtual void    execute(Bureaucrat const & executor) const = 0;
-        void            checker_exec(Bureaucrat cosnt & bur) const;
+        void            checker_exec(Bureaucrat const & bur) const;
         
             // *** Get functions *** //
         std::string getNameForm(void)const;
