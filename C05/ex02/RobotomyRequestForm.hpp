@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:00:43 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/17 13:43:43 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 10:43:45 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 #include <stdexcept>
 #include <iostream>
-#include "form.hpp"
+#include <stdlib.h> //for srand
+#include "Form.hpp"
 
 class Form;
 

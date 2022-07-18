@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:00:19 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 22:15:12 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 10:46:25 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 class Form;
 
-class ShrubberyCreationForm
+class ShrubberyCreationForm : public Form
 {
     public:
         ShrubberyCreationForm(void); //default

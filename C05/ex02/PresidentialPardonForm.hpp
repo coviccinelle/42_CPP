@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:01:13 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/17 18:52:07 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 10:41:35 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,4 @@ class PresidentialPardonForm : public Form
 
     private:
         std::string     _Target;
-}
+};
