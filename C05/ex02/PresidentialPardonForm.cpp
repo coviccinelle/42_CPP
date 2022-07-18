@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:01:23 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/18 12:16:26 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:30:11 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ void    PresidentialPardonForm::execute(Bureaucrat const & executor) const
         std::cerr << "[President]: 🚧 🚸 We couldn’t execute because " << e.what() << '\n';
         return ;
     }
-    std::cout << " was forgiven by Zaphod Beeblebrox." << std::endl;
+    std::cout << this->_Target << " was forgiven by Zaphod Beeblebrox." << std::endl;
     std::cout << "This form was executed successfuly!  ✅ 👌 🎉" << std::endl << std::endl;
 }
