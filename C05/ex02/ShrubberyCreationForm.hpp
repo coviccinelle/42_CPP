@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:00:19 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/18 10:46:25 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 13:06:20 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class ShrubberyCreationForm : public Form
     public:
         ShrubberyCreationForm(void); //default
         ShrubberyCreationForm(std::string target);
-        ShrubberyCreationForm(std::string name, unsigned int grade);
         ShrubberyCreationForm(ShrubberyCreationForm const & fx); // copy
         
         ShrubberyCreationForm &operator= (const ShrubberyCreationForm & fx); //overload

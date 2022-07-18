@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:21 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/18 11:25:51 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 12:58:19 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void    Bureaucrat::setGrade(unsigned int grade)
         }
         if (grade > 150)
              throw Bureaucrat::GradeTooLowException();
-            this->_Grade = grade;
+        this->_Grade = grade;
     }
     catch(std::exception & e)
     {
