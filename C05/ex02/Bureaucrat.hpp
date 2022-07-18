@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:33 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 11:25:11 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 11:23:19 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ class Bureaucrat
         void            decrement(void);
 
         void    signForm(Form & fx);
+        void    executeForm(Form const & form);
         
         class   GradeTooLowException : public std::exception
         {

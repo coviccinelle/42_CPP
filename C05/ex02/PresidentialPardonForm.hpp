@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:01:13 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/18 10:41:35 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 11:29:09 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class PresidentialPardonForm : public Form
     public:
         PresidentialPardonForm(void); // default
         PresidentialPardonForm(std::string target);
-        //PresidentialPardonForm(std::string name, unsigned int grade);
+        PresidentialPardonForm(std::string name, unsigned int grade);
         PresidentialPardonForm(PresidentialPardonForm const & fx); // copie
         
         PresidentialPardonForm &operator=(const PresidentialPardonForm & fx);

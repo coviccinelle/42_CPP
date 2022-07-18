@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:00:27 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/18 11:16:29 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 12:10:39 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,5 +196,5 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
                   ...;%@@@@@%%:;;;;,..							\n";
                   
     file << content;
-    std::cout << "[ShrubberryCreation]: Form executed successfully!" << std::endl << std::endl;
+    std::cout << "[ShrubberyCreation]: Form executed successfully! -> go check out the file (cat)" << std::endl << std::endl;
 }

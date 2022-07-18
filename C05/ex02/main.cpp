@@ -6,68 +6,73 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:18:28 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 19:03:35 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 12:33:27 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-int main()
+int main(void)
 {
-	Bureaucrat	bur("Martin", 20);
-	Form		form;
+	Bureaucrat					bur("Martin", 20);
+	std::cout << std::endl;
+	ShrubberyCreationForm		shru("Trees");
+	std::cout << std::endl;
+	PresidentialPardonForm		pers("Employer");
+	std::cout << std::endl;
+	RobotomyRequestForm			bot("My bot");
+	std::cout << std::endl;
 
-	std::cout << "-----HIGH-----" << std::endl;
-	std::cout << bur;
-	bur.increment();	
-	std::cout << bur;
-	bur.increment();
-	std::cout << bur << std::endl;
-	std::cout << "-----LOW-----" << std::endl;
-	bur.decrement();
-	std::cout << bur;
-	bur.decrement();
-	std::cout << bur << std::endl;
-	
-#ifdef DEBUG
-	bur.decrement();
-	std::cout << bur << std::endl;
-#endif
+	std::cout << "==================SHRUBBERY==================\n";
 
-	std::cout << form << std::endl;
-	std::cout << "------- [VERY FIRST Sign form from Bureaucrat] -------" << std::endl;
-	bur.signForm(form);
-	std::cout << bur << std::endl;
+	bur.executeForm(shru);
+	std::cout << shru << std::endl << std::endl;
 
-	std::cout << "------- [Be signed from Form]-------" << std::endl;
+	std::cout << "-------Be sign-------" << std::endl;
 	try
 	{	
-		form.beSigned(bur);
+		shru.beSigned(bur);
 	}
 	catch (std::exception & e)
 	{
 		std::cout << std::endl;
-		std::cout << bur.getName() << " couldn’t sign because " << e.what() << std::endl << std::endl;
+		std::cout << shru.getNameForm() << " cannot sign because " << e.what() << std::endl << std::endl;
 	}
-	std::cout << form << std::endl;
+	bur.executeForm(shru);
+	std::cout << shru << std::endl << std::endl;
 
+	std::cout << "==================PRESIDENT==================\n";
+	bur.executeForm(pers);
+	std::cout << pers << std::endl << std::endl;
+	std::cout << "-------Be sign-------" << std::endl;
+	try{	
+		pers.beSigned(bur);
+	}
+	catch (std::exception & e){
+		std::cout << std::endl;
+		std::cout << pers.getNameForm() << " cannot sign because " << e.what() << std::endl << std::endl;
+	}
+	bur.executeForm(pers);
+	std::cout << pers << std::endl << std::endl;
 
-	std::cout << "------- [Be signed 2 from Form] -------" << std::endl;
+	std::cout << "==================ROBOT==================\n";
+
+	bur.executeForm(bot);
+	std::cout << bot << std::endl << std::endl;
+	std::cout << "-------Be sign-------" << std::endl;
 	try
-	{
-		form.beSigned(bur);
+	{	
+		bot.beSigned(bur);
 	}
 	catch (std::exception & e)
 	{
-		std::cout << bur.getName() << " couldn’t sign because " << e.what() << std::endl;
+		std::cout << std::endl;
+		std::cout << bot.getNameForm() << " cannot sign because " << e.what() << std::endl << std::endl;
 	}
-	std::cout << form << std::endl;
-
-
-	std::cout << "------- [Sign form] -------" << std::endl;
-	bur.signForm(form);
-	std::cout << bur << std::endl;
+	bur.executeForm(bot);
+	std::cout << bot << std::endl << std::endl;
 	return (0);
-    
 }

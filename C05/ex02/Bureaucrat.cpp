@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:44:21 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 19:04:01 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 11:25:51 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,21 @@ void    Bureaucrat::signForm(Form & fx)
     std::cout << "======  🎆 👏 [SIGN FORM] ✅ 👌 🎉 ====== " << this->_Name << " signed " << fx.getNameForm() << std::endl;
 }
 
+void    Bureaucrat::executeForm(Form const & form)
+{
+    std::cout << "[Bureaucrat] : ExecuteForm function called" << std::endl;
+    try
+    {
+        form.execute(*this);
+    }
+    catch(const std::exception& e)
+    {
+        //std::cerr << e.what() << '\n';
+        (void)e;
+    }
+    
+    
+}
 
 Bureaucrat::~Bureaucrat(void)
 {

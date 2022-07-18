@@ -6,7 +6,7 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/16 19:38:08 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/18 12:34:59 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,7 @@ launch:
 	$(call progress_bar)
 
 clean:
-	$(RM) $(OBJDIR)
+	$(RM) $(OBJDIR) *_shrubbery
 	@echo "$(B)Cleared$(D)"
 
 fclean:			clean

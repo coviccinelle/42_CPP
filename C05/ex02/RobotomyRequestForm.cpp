@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 19:00:51 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/18 10:43:09 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 12:17:24 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void    RobotomyRequestForm::execute(Bureaucrat const &executor) const
     catch(std::exception & e)
     {
         std::cerr << "[RobotomyRequestForm] : 🚧 🚸 ERROR : Excecution corrupted because " << e.what() << std::endl;
+        return ;
     }
     std::cout << "[Robot] : *weird drilling noises* : Eeeeeeehhhhhhhh EHEhejehejehejhe "<< std::endl;
     srand(time (NULL)); //use current time as seed for random generator -> initialise random number generators

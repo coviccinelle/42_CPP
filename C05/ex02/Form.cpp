@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 19:37:01 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/16 18:14:22 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 12:09:28 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,19 @@ void    Form::beSigned(Bureaucrat bur)
     std::cout << "[Form]: ✅👌 This form is already signed ! You good to go (😘 From beSigned)" << std::endl;
 }
 
+
+//virtual void    execute(Bureaucrat const & executor) const = 0;
+
+
+void    Form::checker_exec(Bureaucrat const & bur) const
+{
+    if (this->getSign() == false)
+        throw Form::FormNotSignedException();
+    else if (this->getExecGrade() < (int)bur.getGrade())
+        throw Bureaucrat::GradeTooLowException();
+}
+
+
     // *** Get functions *** //
 std::string Form::getNameForm(void)const
 {
@@ -83,7 +96,10 @@ void        Form::setSign(bool sign)
 std::ostream & operator << (std::ostream & sortie, const Form & fx)
 {
     sortie << "[NameFrom]  == " << fx.getNameForm() << std::endl;
-    sortie << "[Sign]      == " << fx.getSign() << std::endl;
+    if (fx.getSign() == false)
+        sortie << "[Sign]      == 🚧 🚸 The Form is not signed yet..." << std::endl;
+    else
+        sortie << "[Sign]      == ✅ 👌 The Form is already signed " << std::endl;
     sortie << "[SignGrade] == " << fx.getSignGrade() << std::endl;
     sortie << "[ExecGrade] == " << fx.getExecGrade() << std::endl;
     return (sortie);
