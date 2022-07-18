@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:18:28 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/18 13:15:16 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:16:37 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,21 +47,6 @@ int main(void)
 	std::cout << "==================PRESIDENT==================\n";
 	bur.executeForm(pers);
 	std::cout << pers << std::endl << std::endl;
-	
-	std::cout << "-------Decrement-------" << std::endl;
-	bur.decrement();
-	std::cout << bur << std::endl;
-	std::cout << "AHHHHHHHHHHHHHH freak you \n" << pers << std::endl;
-	
-	std::cout << "AHHHHHHHHHHHHHH freak you \n" << pers << std::endl;
-
-	// pers.decrement();
-	// pers.decrement();
-	// pers.decrement();
-	// pers.decrement();
-	// pers.decrement();
-	// pers.decrement();
-
 	
 	std::cout << "-------Be sign-------" << std::endl;
 	try
