@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:18:28 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/18 14:29:22 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/18 15:00:50 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int main(void)
 {
-	Bureaucrat					bur("Martin", 1);
+	Bureaucrat					bur("Martin", 20);
 	std::cout << std::endl;
 	ShrubberyCreationForm		shru("Trees");
 	std::cout << std::endl;
