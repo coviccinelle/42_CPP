@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 14:20:36 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/19 13:06:43 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/19 13:24:50 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,12 @@ Intern & Intern::operator=(const Intern & fx) //overload
 
 Form    * Intern::makeForm(std::string nameForm, std::string targetForm)
 {
-    if (nameForm != "Robot request" && nameForm != "Shruberry request" && nameForm != "Presidential request")
+    if (nameForm != "Robot request" && nameForm != "Shrubbery request" && nameForm != "Presidential request")
     {
         std::cout << "Error 🚧 🚸 : Invalid form !"<< std::endl;
         return NULL;
     }
-    std::string form[3]     = {"Robot request", "Shruberry request", "Presidential request"};
+    std::string form[3]     = {"Robot request", "Shrubbery request", "Presidential request"};
     // tab string of all formules
     Form *ft_ptr[3]         = { new RobotomyRequestForm(targetForm), new ShrubberyCreationForm(targetForm), new PresidentialPardonForm(targetForm)};
     //tab pointers of 3 derived/child class of Form
