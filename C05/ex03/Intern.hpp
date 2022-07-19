@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 14:20:46 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/19 12:03:24 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/19 12:58:45 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PresidentialPardonForm;
 
 class Intern
 {
-    typedef void (Form:::*ft_ptr)(void); //definition a new type of variable
+    typedef void (Form::*ft_ptr)(void); //definition a new type of variable
     public:
         Intern(void);              // default
         Intern(Intern const & fx); // copie

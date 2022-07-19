@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 17:18:28 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/19 11:49:58 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/19 13:02:17 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(void)
 	Form* form;
 
 	form = someRandomIntern.makeForm("PomPom", "Bender");
-	form = someRandomIntern.makeForm("robotomy request", "Bender");
-	delete rrf;
+	form = someRandomIntern.makeForm("Robot request", "Bender");
+	delete form;
 	return (0);
 }

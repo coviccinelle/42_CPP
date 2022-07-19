@@ -6,11 +6,11 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/18 12:34:59 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/19 13:07:47 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ex02_28B_not_28C
+NAME	=	ex03_Intern_At_least_this_beats_coffee_making
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
@@ -24,6 +24,7 @@ SRC		=	Bureaucrat.cpp \
 			PresidentialPardonForm.cpp \
 			RobotomyRequestForm.cpp \
 			ShrubberyCreationForm.cpp \
+			Intern.cpp \
 			main.cpp 
 
 OBJDIR	=	objs
