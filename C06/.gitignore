@@ -1,0 +1,7 @@
+.vscode
+*.o
+.DS_Store
+*a.out
+ex00_Conversion_of_scalar_types
+ex01_Serialization
+ex02_Identify_real_type
