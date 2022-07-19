@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 14:20:36 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/19 12:51:55 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/19 12:52:15 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ Form    * makeForm(std::string nameForm, std::string targetForm)
     }
     return (NULL);
 }
-
     
 std::ostream & operator << (std::ostream & sortie, const Intern & fx)
 {
