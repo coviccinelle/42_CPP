@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 10:58:07 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/20 14:24:41 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/20 15:37:56 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ bool    isDigit(char *av)
 
     while (av[i])
     {
-        if (av[i] != '.' && av[i] != 'f' && av[i] != '-' && isDigit(av[i]) == 0)
+        if (av[i] != '.' && av[i] != 'f' && av[i] != '-' && isdigit(av[i]) == 0)
             return (false);
         i++;
     }
@@ -98,6 +98,8 @@ bool    isDigit(char *av)
 
 char    Convert::toChar(void)
 {
+    if (this->av[0] == 'f' && !this->av[1])
+        return (0);
     if (isDigit(this->av) == true)
     {
         try
@@ -115,8 +117,10 @@ char    Convert::toChar(void)
         if (this->c > 127 || this->c < -128) //check max char
             throw Convert::Impossible();
         if (isprint(this->c) == 0)
-            throw Convert::Nondisplayable();
-        return (static_cast<char>(this->c);
+        {
+            throw Convert::Nondisplayable();   
+        }
+        return (static_cast<char>(this->c));
     }
     if (this->av[1])
     {
@@ -167,7 +171,7 @@ double  Convert::toDouble(void)
 {
     try
     {
-        this->d = static_cast<double>(strtold(this->d, NULL)); // strtold returns a long double
+        this->d = static_cast<double>(strtold(this->av, NULL)); // strtold returns a long double
         return (this->d);
     }
     catch(std::invalid_argument & e)
@@ -207,7 +211,7 @@ std::ostream & operator << (std::ostream & sortie, Convert & fx)
     sortie << "[float] : ";
     try
     {
-        std::cout << fx.toFloat() << std::endl;
+        std::cout << fx.toFloat() << "f" << std::endl;
     }
     catch (std::exception& e)
     {

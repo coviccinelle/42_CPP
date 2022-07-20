@@ -6,15 +6,15 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/20 10:56:45 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/20 14:51:22 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ex00_Conversion_of_scalar_types
+NAME	=	convert
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
-SRC		=	Bureaucrat.cpp \
+SRC		=	Convert.cpp \
 			main.cpp 
 
 OBJDIR	=	objs
