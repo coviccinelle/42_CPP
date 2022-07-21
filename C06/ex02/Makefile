@@ -6,7 +6,7 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/21 21:44:51 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/21 21:49:17 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	=	Identify_real_type
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
-SRC		=	Data.cpp \
+SRC		=	Base.cpp \
 			main.cpp 
 
 OBJDIR	=	objs
