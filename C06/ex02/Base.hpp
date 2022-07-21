@@ -3,11 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thi-phng <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 21:46:29 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/21 21:46:30 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/21 21:51:22 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 
+#include <stdexcept>
+#include <iostream>
+
+
+class Base
+{
+    public:
+        Base(void);
+        virtual ~Base(void);
+
+    protected:
+
+    private:
+}
