@@ -3,5 +3,5 @@
 .DS_Store
 *a.out
 convert
-ex01_Serialization
-ex02_Identify_real_type
+Serialization
+Identify_real_type
