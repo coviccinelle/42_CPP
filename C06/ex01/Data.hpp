@@ -6,11 +6,11 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 10:17:38 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/21 10:56:27 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/21 11:19:45 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#prama once
+#pragma once
 
 #include <stdexcept>
 #include <iostream>
@@ -34,4 +34,4 @@ class Data
     private:
 };
 
-std::ostream  & operator << (std::stream & sortie, const Data & fx);
+std::ostream  & operator << (std::ostream & sortie, const Data & fx);

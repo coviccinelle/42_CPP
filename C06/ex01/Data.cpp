@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 10:17:30 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/21 11:18:39 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/21 11:19:37 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Data::Data(void)
     std::cout << "[Data]: Default constructor called" << std::endl;
 }
 
-Data::Data(int n) : data(i)
+Data::Data(int n) : data(n)
 {
     std::cout << "[Data]: Param constructor called" << std::endl;
 }
