@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 21:46:39 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/21 22:12:44 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/22 21:03:29 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@ void    identity(Base *p)
     B   *b = dynamic_cast<B *>(p);
     C   *c = dynamic_cast<C *>(p);
 
-    if (a)
+    if (a != NULL)
         std::cout << "Object's type is A" << std::endl << std::endl;
-    else if (b)
+    else if (b != NULL)
         std::cout << "Object's type is B" << std::endl << std::endl;
-    else if (c)
+    else if (c != NULL)
         std::cout << "Object's type is C" << std::endl << std::endl;
 }
 
