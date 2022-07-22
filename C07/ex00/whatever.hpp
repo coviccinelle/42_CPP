@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:19:31 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/22 21:27:36 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/22 21:30:47 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <iostream>
 
 template <typename T>
-void    swap(T & am T & b)
+void    swap(T & a, T & b)
 {
     T temp;
     
