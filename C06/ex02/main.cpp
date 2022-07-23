@@ -6,13 +6,12 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 21:46:39 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/22 21:03:29 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/23 10:31:17 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Base.hpp"
 #include <cstdlib>
-#include <typeinfo>
 #include <time.h>
 
 class A : public Base{};
@@ -69,8 +68,7 @@ void    identity(Base &p)
         (void)a;
         std::cout << "Object's type is A" << std::endl << std::endl;
     }
-    catch(std::bad_cast &bc){
-    }
+    catch(...){;}
 
     try
     {
@@ -78,8 +76,7 @@ void    identity(Base &p)
         (void)b;
         std::cout << "Object's type is B" << std::endl << std::endl;
     }
-    catch(std::bad_cast &bc){
-    }
+    catch(...){;}
 
     try
     {
@@ -87,8 +84,7 @@ void    identity(Base &p)
         (void)c;
         std::cout << "Object's type is C" << std::endl << std::endl;
     }
-    catch(std::bad_cast &bc){
-    }
+    catch(...){;}
 }
 
 
