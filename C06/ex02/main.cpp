@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 21:46:39 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/23 10:31:17 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/23 10:57:26 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Base    *generate(void)
 {
     int     n;
 
-    srand(time(NULL)); //-> init random seed
+    srand(time(NULL)); //-> use current time as seed for random generator
     n = rand() % 3;
     if (n == 0)
     {
