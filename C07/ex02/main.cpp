@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:46:06 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/23 20:53:45 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/25 15:51:50 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int main (void)
 {
 	std::cout << ".........Int........." << std::endl;
 	Array<int>	intArray(3);
+
 	intArray[0] = 10;
 	intArray[1] = 20;
 	intArray[2] = 30;
@@ -111,6 +112,9 @@ int main (void)
 	
 	return (0);
 }
+
+// https://www.youtube.com/watch?v=ZudCUY2oNKg
+// Tuto qui m'a permis de faire une classe template
 
 // https://www.youtube.com/watch?v=ZudCUY2oNKg
 // Tuto qui m'a permis de faire une classe template

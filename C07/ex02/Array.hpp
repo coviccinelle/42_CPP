@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:47:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/25 13:32:41 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/25 15:53:18 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ class Array
 
         Array   & operator=(const Array & fx); //copy assignment operator overload
         T       & operator[](unsigned int pos)const; // array subscripting operator
-        unsigned int    size(void) const;
+        unsigned int    size(void) const
         {
             return (this->_size); // -> get size
-        }
+        };
         virtual ~Array(void);
         
     private:
@@ -104,7 +104,7 @@ template<typename T>
 std::ostream & operator << (std::ostream & sortie, const Array<T> & array)
 {
     sortie << "[";
-    for (unsigned int i = 0; i < array.size() - 1)
+    for (unsigned int i = 0; i < array.size(); i++)
     {
         sortie << array[i];
         if (i < array.size() - 1)
