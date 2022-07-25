@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:47:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/23 21:53:06 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/25 13:32:41 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ Array<T>::Array(unsigned int n) : _size(n), array(new T[_size])// create new tab
 {
     for (unsigned int i = 0; i < this->_size; i++)
         this->array[i] = T();
-    std::cout << "[Array]: Array parametre constructor" << std::endl;
+    std::cout << "[Array]: Array parametre constructor + create a new tab" << std::endl;
 }
 
 template<typename T>
@@ -67,4 +67,49 @@ Array<T>::Array(Array const & fx) // copy constructor
     std::cout << "[Array]: Copy constructor" << std::endl;
     this->_size = fx.size();
     this->array = new T(fx._size);
+    for (unsigned int i = 0; i < fx._size; i++)
+        this->array[i] = fx.array[i];
+}
+
+template<typename T>
+Array<T> & Array<T>::operator=(Array const & fx) // copy assignement operator overload constructor
+{
+    std::cout << "[Array]: copy assignement operator overload constructor" << std::endl;
+    if (this->_size != 0 && this->_size != fx.size())
+        delete [] this->array;
+    this->_size = fx.size();
+    this->array = new T[fx._size];
+    for (unsigned int i = 0; i < fx._size; i++)
+        this->array[i] = fx.array[i];
+    return (*this);
+}
+
+template<typename T>
+T & Array<T>::operator[](unsigned int i) const
+{
+    if (i >= this->_size)
+        throw out_of_range();
+    return (this->array[i]);
+}
+
+template<typename T>
+Array<T>::~Array(void)
+{
+    std::cout << "[Array]: Destructor called" << std::endl;
+    if (this->array)
+        delete [] this->array;
+}
+
+template<typename T>
+std::ostream & operator << (std::ostream & sortie, const Array<T> & array)
+{
+    sortie << "[";
+    for (unsigned int i = 0; i < array.size() - 1)
+    {
+        sortie << array[i];
+        if (i < array.size() - 1)
+            sortie << ", ";
+    }
+    sortie << "]";
+    return (sortie);
 }
