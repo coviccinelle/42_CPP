@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:47:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/25 15:53:18 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/25 22:15:21 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <cstdlib>
 
 template <typename T>
 
@@ -34,7 +35,7 @@ class Array
         Array(Array const & fx); //copy constructor
 
         Array   & operator=(const Array & fx); //copy assignment operator overload
-        T       & operator[](unsigned int pos)const; // array subscripting operator
+        T       & operator[](unsigned int i)const; // array subscripting operator
         unsigned int    size(void) const
         {
             return (this->_size); // -> get size
@@ -69,6 +70,7 @@ Array<T>::Array(Array const & fx) // copy constructor
     this->array = new T(fx._size);
     for (unsigned int i = 0; i < fx._size; i++)
         this->array[i] = fx.array[i];
+    std::cout << "[Array]: DONEEE Copy constructor \n" << std::endl;
 }
 
 template<typename T>
