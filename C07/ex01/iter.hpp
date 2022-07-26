@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:32:55 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/22 21:40:03 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/26 21:07:02 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 template <typename T>
 void    my_function(T const & arg)
 {
-    std::cout << "my_function: " << static_cast<T>(arg) << std::endl;
+    std::cout << "my_function: " << arg << std::endl;
 }
 
 template <typename T>
