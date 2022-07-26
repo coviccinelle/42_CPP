@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:47:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/26 13:35:47 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/26 21:07:02 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,8 @@ template<typename T>
 Array<T>::Array(unsigned int n) : _size(n), array(new T[_size])// create new tab
 {
     std::cout << "[Array]: Array parametre constructor + create a new tab" << std::endl;
-    for (unsigned int i = 0; i < this->_size; i++)
-        this->array[i] = T();
+    // for (unsigned int i = 0; i < this->_size; i++)
+    //     this->array[i] = T();
 }
 
 template<typename T>
