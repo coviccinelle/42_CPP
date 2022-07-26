@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:47:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/26 10:49:08 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/26 11:30:26 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ Array<T> & Array<T>::operator=(Array const & fx) // copy assignement operator ov
     return (*this);
 }
 
+//array subscripting operator in C++. The expression inside the brackets is called subscript
 template<typename T>
 T & Array<T>::operator[](unsigned int i) const
 {
