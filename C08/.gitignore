@@ -1,0 +1,7 @@
+.vscode
+*.o
+.DS_Store
+*a.out
+Easy_find
+Span
+Mutated_abomination
