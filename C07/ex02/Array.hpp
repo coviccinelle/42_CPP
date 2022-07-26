@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:47:18 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/26 10:05:12 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/26 10:49:08 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ Array<T>::Array(void) : _size(0), array(NULL)// default constructor
 template<typename T>
 Array<T>::Array(unsigned int n) : _size(n), array(new T[_size])// create new tab
 {
+    std::cout << "[Array]: Array parametre constructor + create a new tab" << std::endl;
     for (unsigned int i = 0; i < this->_size; i++)
         this->array[i] = T();
-    std::cout << "[Array]: Array parametre constructor + create a new tab" << std::endl;
 }
 
 template<typename T>
@@ -66,10 +66,9 @@ Array<T>::Array(Array const & fx) // copy constructor
 {
     std::cout << "[Array]: Copy constructor" << std::endl;
     this->_size = fx.size();
-    this->array = new T(fx._size);
+    this->array = new T[fx._size];
     for (unsigned int i = 0; i < fx._size; i++)
         this->array[i] = fx.array[i];
-    std::cout << "[Array]: DONEEE Copy constructor \n" << std::endl;
 }
 
 template<typename T>
