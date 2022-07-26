@@ -6,11 +6,11 @@
 #    By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 18:18:06 by thi-phng          #+#    #+#              #
-#    Updated: 2022/07/22 21:21:48 by thi-phng         ###   ########.fr        #
+#    Updated: 2022/07/26 12:17:34 by thi-phng         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	whatever
+NAME	=	Easy_find
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM		=	rm -rf
