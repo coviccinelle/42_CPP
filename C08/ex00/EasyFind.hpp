@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 12:20:24 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/26 12:29:46 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/26 21:39:45 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ void    easyfind(T & stack, int n)
     if (i == stack.end())
         throw (std::runtime_error("Element not found"));
     std::cout << "Success, the element is found !!!" << std::endl;
-    std::cout << "Its value = " << std::ednl;
-    std::cout << "Its address = " << &(*i) << std::ednl;
+    std::cout << "Its value = " << *i << std::endl;
+    std::cout << "Its address = " << &(*i) << std::endl;
 }
