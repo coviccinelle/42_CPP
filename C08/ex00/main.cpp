@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 12:20:39 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/26 21:41:10 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/27 09:33:48 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int main(void)
     for (i = v.begin(); i != v.end(); i++)
         std::cout << *i << std::endl; //testing purpose only
 
-    std::cout << std::endl << "Test part 1: false case" << std::endl;
+    std::cout << std::endl << "Test part 1: false case : go find 18" << std::endl;
     try
     {
         easyfind(v, 18);
@@ -52,7 +52,7 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
-    std::cout << std::endl << "Test part 2: true case" << std::endl;
+    std::cout << std::endl << "Test part 2: true case : go find 98" << std::endl;
     try
     {
         easyfind(v, 98);
