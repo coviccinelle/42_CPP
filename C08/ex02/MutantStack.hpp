@@ -6,18 +6,14 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 21:43:17 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/26 21:54:37 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/28 21:16:03 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #pragma once
 
 #include <iostream>
 #include <stack>
-
-// https://stackoverflow.com/questions/525365/does-stdstack-expose-iterators
-// how to use existed objet in class template of stack
 
 template<typename T>
 class MutantStack : public std::stack<T>
@@ -32,9 +28,13 @@ class MutantStack : public std::stack<T>
 
         ~MutantStack(){}
 
-        typedef typename std::stack<T>::container_type:: iterator iterator;
-        iterator    begin() {return this->c.begin(); }
-        iterator    end() {return this->c.end(); }
+        typedef typename std::stack<T>::container_type::iterator itero;
+        //add our iterator : let us 
+        itero    begin() {return this->c.begin(); }
+        itero    end() {return this->c.end(); }
         
     private:  
 };
+
+// https://stackoverflow.com/questions/525365/does-stdstack-expose-iterators
+// how to use existed objet in class template of stack
