@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:46:55 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/28 09:50:38 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/28 14:35:21 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,9 @@ int             Span::longestSpan(void)
         throw Span::NotFound();
     tmp = *std::max_element(this->vec.begin(), this->vec.end()) - *std::min_element(this->vec.begin(), this->vec.end());
     return (tmp);
-    // https://www.cplusplus.com/reference/algorithm/min_element/
 }
+// https://www.cplusplus.com/reference/algorithm/min_element/
+
 
 void            Span::SpanRangIt(int a, int b)
 {
