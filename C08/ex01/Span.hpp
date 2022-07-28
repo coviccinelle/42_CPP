@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:46:33 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/27 11:18:21 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/28 15:15:22 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,10 @@ class Span
         Span & operator=(const Span & fx);
         unsigned int    getSize(void) const { return (this->size); }
         void            addNumber(int n);
+        
         int             shortestSpan(void);
         int             longestSpan(void);
-        void            SpanRangIt(int a, int b);
+        //void            SpanRangIt(int a, int b);
         void            display(void) const;
         
         ~Span(void);
@@ -56,7 +57,7 @@ class Span
     
     private:
         unsigned int        size;
-        std::vector<int>    vec;
+        std::vector<int>    numbers;
 };
 
 std::ostream & operator << (std::ostream & sortie, const Span & fx);
