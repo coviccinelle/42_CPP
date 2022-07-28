@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:46:55 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/28 15:24:04 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/28 15:48:50 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ int             Span::longestSpan(void)
 
 
 //to set random number from a to b
-void            Span::SpanRangIt(int a, int b)
+void            Span::SpanRangeIt(int a, int b)
 {
     // a: begin; b = end;
     unsigned int    to_range = b - a;

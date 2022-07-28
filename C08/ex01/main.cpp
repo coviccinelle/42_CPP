@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:48:22 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/28 15:32:20 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/28 15:51:10 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,16 +75,18 @@ int main()
     std::cout << "Longest span is : " << sp.longestSpan() << std::endl;
 
 	#ifdef DEBUG
-		std::cout << std::endl << "---Another test haha---" << std::endl;
-		Span sp2 = Span(10000);
-		std::cout << "We just created a span with N = 1000" << std::endl;
+		std::cout << std::endl << "--- Another test ---" << std::endl;
+		Span sp2 = Span(150);
+		std::cout << "We just created a span with N = 150" << std::endl;
 		std::cout << "-------------------------------" << std::endl;
 		std::cout << "Let's add the numbers (in one function call)!" << std::endl;
-		sp2.SpanRangeIt(0, 9999);
+		sp2.SpanRangeIt(0, 149);
 		std::cout << "-------------------------------" << std::endl;
 		std::cout << "Let's display the span" << std::endl;
 		sp2.display();
 		std::cout << "-------------------------------" << std::endl;
+		std::cout << "Shortest span is : " << sp2.shortestSpan() << std::endl;// -> bug
+    	std::cout << "Longest span is : " << sp2.longestSpan() << std::endl;
 	#endif
 
     return 0;

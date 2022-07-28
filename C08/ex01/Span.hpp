@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:46:33 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/28 15:23:42 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/28 15:48:55 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Span
         int             shortestSpan(void);
         int             longestSpan(void);
         
-        void            SpanRangIt(int a, int b);
+        void            SpanRangeIt(int a, int b);
         void            display(void) const;
         
         ~Span(void);
