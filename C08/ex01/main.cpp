@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:48:22 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/27 10:29:14 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/28 09:50:12 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int main()
     sp.addNumber(9);
     sp.addNumber(11);
     
-    std::cout << sp.shortestSpan() << std::endl;
-    std::cout << sp.longestSpan() << std::endl;
+    std::cout << "hihiehehe \n";
+    std::cout << "Shortest span is : " << sp.shortestSpan() << std::endl;// -> bug
+    std::cout << "Longest span is : " << sp.longestSpan() << std::endl;
     return 0;
 }

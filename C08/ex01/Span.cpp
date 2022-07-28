@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:46:55 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/27 11:20:22 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/28 09:50:38 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,8 @@ int             Span::shortestSpan(void)
     if (this->vec.size() < 2)
         throw Span::NotFound();
     sort(this->vec.begin(), this->vec.end());
-    tmp = std::abs(this->vec[0] = this->vec[1]);
-    for (it = this->vec.begin(); nit != this->vec.end(); nit++)
+    tmp = std::abs(this->vec[0] - this->vec[1]);
+    for (it = this->vec.begin(); nit != this->vec.end(); it++)
     {
         for (nit = it + 1; nit != this->vec.end(); nit++)
         {
