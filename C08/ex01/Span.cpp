@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:46:55 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/28 15:17:50 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/28 15:18:45 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,15 +67,11 @@ int             Span::shortestSpan(void)
     tmp = std::abs(this->numbers[0] - this->numbers[1]);
     for (it = this->numbers.begin(); it != this->numbers.end(); it++)
     {
-        std::cout << "BIG LOOOP : it = " << *it << std::endl;
         for (nit = it + 1; nit != this->numbers.end(); nit++)
         {
-            std::cout << "Small LOOOP : it = " << *it << ", nit = " << *nit << std::endl;
-            
             if (tmp > static_cast<long>(abs(*it - *nit)))
                 tmp = static_cast<long>(abs(*it - *nit));
         }
-        std::cout << "tmp small span = " << tmp << std::endl;
     }
     return (tmp);
 }
