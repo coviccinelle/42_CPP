@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:46:55 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/28 15:18:45 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/07/28 15:24:04 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,16 +88,17 @@ int             Span::longestSpan(void)
 // https://www.cplusplus.com/reference/algorithm/min_element/
 
 
-// void            Span::SpanRangIt(int a, int b)
-// {
-//     // a: begin; b = end;
-//     unsigned int    to_range = b - a;
+//to set random number from a to b
+void            Span::SpanRangIt(int a, int b)
+{
+    // a: begin; b = end;
+    unsigned int    to_range = b - a;
     
-//     if (to_range >= this->size)
-//         throw Span::NotFound();
-//     for (int i = a; i <= b; i++)
-//         this->numbers.push_back(i);
-// }
+    if (to_range >= this->size)
+        throw Span::NotFound();
+    for (int i = a; i <= b; i++)
+        this->numbers.push_back(i);
+}
 
 
 void            Span::display(void) const
