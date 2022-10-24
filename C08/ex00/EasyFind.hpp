@@ -6,7 +6,7 @@
 /*   By: thi-phng <thi-phng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 12:20:24 by thi-phng          #+#    #+#             */
-/*   Updated: 2022/07/26 21:39:45 by thi-phng         ###   ########.fr       */
+/*   Updated: 2022/10/24 11:43:55 by thi-phng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 template<typename T>
 void    easyfind(T & stack, int n)
 {
-    std::vector<int>::iterator i;
+    typename T::iterator i;
     //  https://www.youtube.com/watch?v=O6MB4j7rUb8
     
     i = std::find(stack.begin(), stack.end(), n);
